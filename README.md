@@ -1,69 +1,37 @@
-# Typst Packages
-The package repository for Typst, where package authors submit their packages.
-The packages submitted here are available on [Typst Universe][universe].
+# Invaria
 
-## Package format
+This is a Typst package for providing (physical) constants. It is derived from the following sources:
 
-A package is a collection of Typst files and assets that can be imported as a
-unit. A `typst.toml` manifest with metadata is required at the root of a
-package. [Read more about the manifest format][manifest].
+- Fundamental Physical Constants of [NIST](http://physics.nist.gov/constants) (2022 CODATA recommended values)[^1]
+  - [PDF](https://physics.nist.gov/cuu/pdf/all.pdf)
+  - [Text](https://physics.nist.gov/cuu/Constants/Table/allascii.txt)
+- [SciPy constants](https://docs.scipy.org/doc/scipy/reference/constants.html)
 
-## Published packages
 
-This repository contains a collection of published packages. Due to its early
-and experimental nature, all packages in this repository are scoped in a
-`preview` namespace. A package that is stored in
-`packages/preview/{name}/{version}` in this repository will become available in
-Typst as `#import "@preview/{name}:{version}"`. You must always specify the full
-package version.
+## Usage
 
-You can use template packages to create new Typst projects with the CLI with
-the `typst init` command or the web application by clicking the _Start from
-template_ button.
+The constants are accessible by revision.
 
-If you want to submit your own package, you can follow [our documentation on
-publishing packages][publishing] that will guide you through the process and
-give you some tips.
+**TODO**
 
-### Downloads
 
-The Typst compiler downloads packages from the `preview` namespace on-demand.
-Once used, they are cached in `{cache-dir}/typst/packages/preview` where
-`{cache-dir}` is
+## Development
 
-- `$XDG_CACHE_HOME` or `~/.cache` on Linux
-- `~/Library/Caches` on macOS
-- `%LOCALAPPDATA%` on Windows
+The idea of this library is to use a python script to extracts the information from various data sources, structure it and output the typst files.
+You can use e.g. `pipx` or `uv` to run the script: 
+```shell
+# pipx
+pipx run tools/invaria_helpfunctions.py
+# or using uv
+uv run tools/invaria_helpfunctions.py
+```
 
-Importing a cached package does not result in network access.
 
-## Local packages
+### Planned features
 
-Want to install a package locally on your system without publishing it or
-experiment with it before publishing? You can store packages in
-`{data-dir}/typst/packages/{namespace}/{name}/{version}` to make them available
-locally on your system. Here, `{data-dir}` is
+- [ ] Integration with typst packages, providing supports for typesetting numbers and units
+    - [ ] [unify](https://typst.app/universe/package/unify)
+    - [ ] [zero](https://typst.app/universe/package/zero)
 
-- `$XDG_DATA_HOME` or `~/.local/share` on Linux
-- `~/Library/Application Support` on macOS
-- `%APPDATA%` on Windows
-
-Packages in the data directory have precedence over ones in the cache directory.
-While you can create arbitrary namespaces with folders, a good namespace for
-system-local packages is `local`:
-
-- Store a package in `~/.local/share/typst/packages/local/mypkg/1.0.0`
-- Import from it with `#import "@local/mypkg:1.0.0": *`
-
-Note that future iterations of Typst's package management may change/break this
-local setup.
-
-## License
-
-The infrastructure around the package repository is licensed under the terms of
-the Apache-2.0 license. Packages in `packages/` are licensed under their
-respective license.
-
-[universe]: https://typst.app/universe/
-[manifest]: docs/manifest.md
-[publishing]: docs/README.md
+## References
+[^1]: Eite Tiesinga, Peter J. Mohr, David B. Newell, and Barry N. Taylor (2024), "The 2022 CODATA Recommended Values of the Fundamental Physical Constants" (Web Version 9.0). Database developed by J. Baker, M. Douma, and S. Kotochigova. Available at https://physics.nist.gov/constants, National Institute of Standards and Technology, Gaithersburg, MD 20899.
