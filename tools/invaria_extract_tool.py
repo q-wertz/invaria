@@ -9,8 +9,8 @@
 import pathlib
 from typing import Final
 
-from lib.file_writers import constants2typst, constants2yaml
-from lib.nist_data_readers import read_nist_ascii, scrape_nist
+from src.file_writers import constants2typst, constants2yaml
+from src.nist_data_readers import read_nist_ascii, scrape_nist
 
 # Some constants
 # CODATA_BASE_URL: Final = ulibp.urlsplit("https://physics.nist.gov")
