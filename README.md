@@ -82,6 +82,10 @@ That means, that it takes light #{ calc.round(earth-moon-distance / speed_of_lig
 
 The idea of this library is to use a python script to extracts the information from various data sources, combine it, structure it and output the typst files.
 
+The tool uses the NIST ALLASCII table as basis and enriches it with information scraped from the NIST CODATA website.
+In theory the website contains all the information. But the original goal was, to read the information from the text and PDF files.
+Would still be nice to be independent of the NIST website, but retrieving the information from the PDF turned out to be more complicated than initially expected.
+
 You can use e.g. `pipx` or `uv` to run the `extract_tool.py`:
 - `uv`:
   ```shell
@@ -91,8 +95,6 @@ You can use e.g. `pipx` or `uv` to run the `extract_tool.py`:
   ```shell
   pipx run tools/invaria_extract_tool.py
   ```
-
-The tool uses the NIST ALLASCII table as basis and enriches it with information scraped from the NIST CODATA website.
 
 
 ## References
