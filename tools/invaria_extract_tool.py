@@ -10,6 +10,7 @@ import pathlib
 from typing import Final
 
 from src.file_writers import constants2typst, constants2yaml
+from src.helpclasses import Constant, ConstantCategory
 from src.nist_data_readers import read_nist_ascii, scrape_nist
 
 # Some constants
@@ -29,5 +30,18 @@ if __name__ == "__main__":
 
     scrape_nist(nist_constants)
 
+    nist_categorized_constants: dict[ConstantCategory | None, list[Constant]] = {
+        cc: [] for cc in list(ConstantCategory) + [None]
+    }
+    for constant in nist_constants:
+        if len(constant.categories) == 0:
+            nist_categorized_constants[None].append(constant)
+            continue
+        for category in constant.categories:
+            nist_categorized_constants[category].append(constant)
+
     constants2yaml(nist_constants, ofolder=pathlib.Path("src/CODATA2022/"))
-    constants2typst(nist_constants, ofolder=pathlib.Path("src/CODATA2022/"))
+    dataset_import_filename = constants2typst(
+        nist_categorized_constants, ofolder=pathlib.Path("src/CODATA2022/")
+    )
+

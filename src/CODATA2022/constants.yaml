@@ -338,8 +338,8 @@
   uncertainty: null
   unit: mol^-1
   categories:
-  - Physico-chemical
   - Defined constants
+  - Physico-chemical
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?na
 - quantity: Bohr magneton
   symbol: ' $\mu_{\rm B}$ '
@@ -395,8 +395,8 @@
   uncertainty: null
   unit: J K^-1
   categories:
-  - Physico-chemical
   - Defined constants
+  - Physico-chemical
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?k
 - quantity: Boltzmann constant in eV/K
   symbol: ' $k$ '
@@ -929,8 +929,8 @@
   uncertainty: null
   unit: C
   categories:
-  - Electromagnetic
   - Defined constants
+  - Electromagnetic
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?e
 - quantity: elementary charge over h-bar
   symbol: ' $e/\hbar$ '
@@ -1980,8 +1980,8 @@
   uncertainty: null
   unit: J Hz^-1
   categories:
-  - Universal
   - Defined constants
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?h
 - quantity: Planck constant in eV/Hz
   symbol: ' $ h $ '
@@ -2237,8 +2237,8 @@
   uncertainty: null
   unit: J s
   categories:
-  - Universal
   - Defined constants
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbar
 - quantity: reduced Planck constant in eV s
   symbol: ' $\hbar$ '
@@ -2433,8 +2433,8 @@
   uncertainty: null
   unit: m s^-1
   categories:
-  - Universal
   - Defined constants
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?c
 - quantity: standard acceleration of gravity
   symbol: ' $g_{\rm n}$ '
