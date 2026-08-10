@@ -44,7 +44,7 @@ There are various ways to use the imports:
 
   #invaria.codata2022.defined_constants.speed_of_light_in_vacuum
   ```
-  This could be useful in case you want to compare the same constant from different datasources.
+  This could be useful in case you want to compare the same constant from different data sources.
 - Youc can only load the CODATA2022 constants
   ```typst
   #import "@preview/invaria:0.1.0": codata2022
@@ -67,14 +67,15 @@ There are various ways to use the imports:
 
 ### Using the Constants
 
-You can use the constants for example in calculations
+You can use the constants and meta information for example in calculations and
 ```typst
 #import "@preview/invaria:0.1.0": codata2022.defined_constants.speed_of_light_in_vacuum
+#import "@preview/unify:0.8.1": qty
 
 #let earth-moon-distance = 385000e3
 
-In vacuum light travels with a velocity of #speed_of_light_in_vacuum.val meters per second.
-That means, that it takes light #{ calc.round(earth-moon-distance / speed_of_light_in_vacuum.val, digits: 2) } to get from the moon to earth.
+In vacuum, light travels with a velocity of #speed_of_light_in_vacuum.val meters per second.
+That means, that it takes light approximately #qty(calc.round(earth-moon-distance / speed_of_light_in_vacuum.val, digits: 1), speed_of_light_in_vacuum.unit) to get from the moon to earth.
 ```
 
 
