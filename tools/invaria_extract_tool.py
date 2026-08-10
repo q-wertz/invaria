@@ -9,7 +9,7 @@
 import pathlib
 from typing import Final
 
-from src.file_writers import constants2typst, constants2yaml
+from src.file_writers import constants2typst, constants2yaml, write_unittest_files
 from src.helpclasses import Constant, ConstantCategory
 from src.nist_data_readers import read_nist_ascii, scrape_nist
 
@@ -45,3 +45,8 @@ if __name__ == "__main__":
         nist_categorized_constants, ofolder=pathlib.Path("src/CODATA2022/")
     )
 
+    write_unittest_files(
+        categorized_constants=nist_categorized_constants,
+        dataset_import_filename=dataset_import_filename,
+        unittestfolder=pathlib.Path("tests/codata2022"),
+    )

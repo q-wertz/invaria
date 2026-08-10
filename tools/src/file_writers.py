@@ -123,3 +123,58 @@ def constants2typst(
 
     return dataset_import_file_name
 
+
+def write_unittest_files(
+    categorized_constants: dict[ConstantCategory | None, list[Constant]],
+    dataset_import_filename: pathlib.Path,
+    unittestfolder: pathlib.Path,
+    filename_uncategorized_groups: str = "uncategorized",
+) -> None:
+    """_summary_
+
+    Parameters
+    ----------
+    categorized_constants
+        _description_
+    dataset_import_filename
+        The file where the categorized constant imports are written to.
+    """
+    with open(unittestfolder / "test.typ", mode="w", encoding="utf-8") as test_file:
+        import_path = dataset_import_filename.absolute().relative_to(
+            unittestfolder.absolute(), walk_up=True
+        )
+        _ = test_file.write(
+            textwrap.dedent(
+                f"""\
+                #title([#upper("{dataset_import_filename.stem}") Test File])
+
+                #outline(title: "Constant categories")
+
+                #import "{import_path}"\n\n
+                """
+            )
+        )
+
+        for category, constants in categorized_constants.items():
+            _ = test_file.write(f"= {category}\n\n")
+            _ = test_file.write(
+                textwrap.dedent(
+                    """\
+                    #table(
+                      columns: 5,
+                      // inset: 10pt,
+                      // align: horizon,
+                      table.header(
+                        [*Quantity*], [*Symbol*], [*Value*], [*Uncertainty*], [*Unit*]
+                      ),
+                    """
+                )
+            )
+
+            for constant in constants:
+                const_qualifier = f"{import_path.stem}.{filename_uncategorized_groups if category is None else category.name.lower()}.{constant.typst_variable_name}"
+                _ = test_file.write(
+                    f"  {const_qualifier}.quantity,\n  [#{const_qualifier}.symbol],\n  [#{const_qualifier}.val],\n  [#{const_qualifier}.uncert],\n  [#{const_qualifier}.unit],\n\n"
+                )
+
+            _ = test_file.write(")\n\n")
