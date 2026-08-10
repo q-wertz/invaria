@@ -146,11 +146,16 @@ def write_unittest_files(
         _ = test_file.write(
             textwrap.dedent(
                 f"""\
+                #import "@preview/unify:0.8.1": unit
+
+                #import "{import_path}"
+
+                #show link: underline
+
+
                 #title([#upper("{dataset_import_filename.stem}") Test File])
 
-                #outline(title: "Constant categories")
-
-                #import "{import_path}"\n\n
+                #outline(title: "Constant categories")\n
                 """
             )
         )
@@ -165,7 +170,7 @@ def write_unittest_files(
                       // inset: 10pt,
                       // align: horizon,
                       table.header(
-                        [*Quantity*], [*Symbol*], [*Value*], [*Uncertainty*], [*Unit*]
+                        [*Quantity*], [*Symbol*], [*Value*], [*Uncertainty*], [*Unit (#link("https://typst.app/universe/package/unify/")[unify])*]
                       ),
                     """
                 )
@@ -174,7 +179,7 @@ def write_unittest_files(
             for constant in constants:
                 const_qualifier = f"{import_path.stem}.{filename_uncategorized_groups if category is None else category.name.lower()}.{constant.typst_variable_name}"
                 _ = test_file.write(
-                    f"  {const_qualifier}.quantity,\n  [#{const_qualifier}.symbol],\n  [#{const_qualifier}.val],\n  [#{const_qualifier}.uncert],\n  [#{const_qualifier}.unit],\n\n"
+                    f"  {const_qualifier}.quantity,\n  [#{const_qualifier}.symbol],\n  [#{const_qualifier}.val],\n  [#{const_qualifier}.uncert],\n  unit({const_qualifier}.unit),\n\n"
                 )
 
             _ = test_file.write(")\n\n")
