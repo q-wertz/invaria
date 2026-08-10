@@ -11,7 +11,7 @@ This is a Typst package for providing (physical) constants. It is derived from t
 
 The constants are grouped into categories just like in the NIST CODATA database. Some variables can occur in multiple of those categories, just use the one that fits you best.
 
-Each constant is a [typst dictionary](https://typst.app/docs/reference/foundations/dictionary/) and its variable name is the normalized quantity name. The dictionary contains the various information of the constant e.g.
+Each constant is a [Typst dictionary](https://typst.app/docs/reference/foundations/dictionary/) and its variable name is the normalized quantity name. The dictionary contains the various information of the constant e.g.
 ```typst
 #let electron_mass = (
   val: 9.1093837139e-31,
@@ -81,7 +81,7 @@ That means, that it takes light approximately #qty(calc.round(earth-moon-distanc
 
 ## Development
 
-The idea of this library is to use a python script to extracts the information from various data sources, combine it, structure it and output the typst files.
+The idea of this library is to use a python script to extracts the information from various data sources, combine it, structure it and output the Typst files.
 
 The tool uses the NIST ALLASCII table as basis and enriches it with information scraped from the NIST CODATA website.
 In theory the website contains all the information. But the original goal was, to read the information from the text and PDF files.

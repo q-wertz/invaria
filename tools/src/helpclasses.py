@@ -77,7 +77,7 @@ class Constant:
 
     @property
     def typst_variable_name(self) -> str:
-        """Get an identifier that can be used as a typst variable name."""
+        """Get an identifier that can be used as a Typst variable name."""
         # TODO: Could be improved performance wise
         return (
             self.quantity.lower()

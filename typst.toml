@@ -10,5 +10,5 @@ repository = "https://github.com/q-wertz/invaria"
 keywords = ["constant", "physics", "nist", "codata"]
 categories = ["scripting", "fun", "utility"]
 disciplines = ["chemistry", "education", "engineering", "physics"]
-# compiler = "0.13.1" # Should work on any typst version
+# compiler = "0.13.1" # Should work on any Typst version
 exclude = ["/data-sources/*", "/tools/*"]

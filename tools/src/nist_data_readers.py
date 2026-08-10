@@ -33,8 +33,8 @@ def read_nist_ascii(
         return parse_value(unc)
 
     def parse_unit(unit: str, typst_pkg: TypstUnitLib = TypstUnitLib.UNIFY) -> str:
-        """Parses a string unit and converts it to a typst unit."""
-        # TODO: implement
+        """Parses a string unit and converts it to a Typst unit."""
+        # TODO: implement. Currently it is only working for the unify package out of the box.
         return unit
 
     if start_data <= col_names_line:
