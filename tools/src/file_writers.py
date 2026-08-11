@@ -146,7 +146,8 @@ def write_unittest_files(
         _ = test_file.write(
             textwrap.dedent(
                 f"""\
-                #import "@preview/unify:0.8.1": unit
+                #import "@preview/unify:0.8.1"
+                #import "@preview/zero:0.6.1"
 
                 #import "{import_path}"
 
@@ -178,8 +179,18 @@ def write_unittest_files(
 
             for constant in constants:
                 const_qualifier = f"{import_path.stem}.{filename_uncategorized_groups if category is None else category.name.lower()}.{constant.typst_variable_name}"
+
+                uncert_str = (
+                    "none"
+                    if constant.uncertainty is None
+                    else str(f'zero.num({const_qualifier}.uncert, exponent: "sci")')
+                )
                 _ = test_file.write(
-                    f"  {const_qualifier}.quantity,\n  [#{const_qualifier}.symbol],\n  [#{const_qualifier}.val],\n  [#{const_qualifier}.uncert],\n  unit({const_qualifier}.unit),\n\n"
+                    f"  {const_qualifier}.quantity,\n"
+                    + f"  [#{const_qualifier}.symbol],\n"
+                    + f'  zero.num({const_qualifier}.val, exponent: "sci"),\n'
+                    + f"  {uncert_str},\n"
+                    + f"  unify.unit({const_qualifier}.unit),\n\n"
                 )
 
             _ = test_file.write(")\n\n")
