@@ -40,27 +40,27 @@ There is also a `.yaml` file containing all the constants.
 There are various ways to use the imports:
 - Usage by full identifier
   ```
-  #import "@preview/invaria:0.1.0"
+  #import "@preview/invaria:0.2.0"
 
   #invaria.codata2022.defined_constants.speed_of_light_in_vacuum
   ```
   This could be useful in case you want to compare the same constant from different data sources.
 - Youc can only load the CODATA2022 constants
   ```typst
-  #import "@preview/invaria:0.1.0": codata2022
+  #import "@preview/invaria:0.2.0": codata2022
 
   #codata2022.defined_constants.speed_of_light_in_vacuum
   ```
   Useful if you are using a lot of constants but want to stay in the same data source.
 - Only load a single category
   ```typst
-  #import "@preview/invaria:0.1.0": codata2022.defined_constants
+  #import "@preview/invaria:0.2.0": codata2022.defined_constants
 
   #defined_constants.speed_of_light_in_vacuum
   ```
 - Only load a single constant
   ```typst
-  #import "@preview/invaria:0.1.0": codata2022.defined_constants.speed_of_light_in_vacuum
+  #import "@preview/invaria:0.2.0": codata2022.defined_constants.speed_of_light_in_vacuum
 
   #speed_of_light_in_vacuum
   ```
@@ -69,7 +69,7 @@ There are various ways to use the imports:
 
 You can use the constants and meta information for example in calculations and
 ```typst
-#import "@preview/invaria:0.1.0": codata2022.defined_constants.speed_of_light_in_vacuum
+#import "@preview/invaria:0.2.0": codata2022.defined_constants.speed_of_light_in_vacuum
 #import "@preview/unify:0.8.1": qty
 
 #let earth-moon-distance = 385000e3

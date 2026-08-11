@@ -1,6 +1,6 @@
 [project]
 name = "invaria"
-version = "0.1.0"
+version = "0.2.0"
 description = "Package for typst containing physical constants. Python code is to extract the constant information from various sources."
 readme = "README.md"
 requires-python = ">=3.12"
