@@ -13,7 +13,7 @@ The constants are grouped into categories just like in the NIST CODATA database.
 
 Each constant is a [Typst dictionary](https://typst.app/docs/reference/foundations/dictionary/) and its variable name is the normalized quantity name. The dictionary contains the various information of the constant e.g.
 ```typst
-#let electron_mass = (
+#let electronMass = (
   val: 9.1093837139e-31,
   uncert: 2.8e-40,
   unit: "kg",
@@ -37,45 +37,96 @@ There is also a `.yaml` file containing all the constants.
 
 ### Importing Constants
 
-There are various ways to use the imports:
+There are various ways to use the imports. A non-exhaustive list of examples:
 - Usage by full identifier
   ```
   #import "@preview/invaria:0.2.0"
 
-  #invaria.codata2022.defined_constants.speed_of_light_in_vacuum
+  #invaria.codata2022.defined_constants.speedOfLightInVacuum
   ```
   This could be useful in case you want to compare the same constant from different data sources.
 - Youc can only load the CODATA2022 constants
   ```typst
   #import "@preview/invaria:0.2.0": codata2022
 
-  #codata2022.defined_constants.speed_of_light_in_vacuum
+  #codata2022.defined_constants.speedOfLightInVacuum
   ```
   Useful if you are using a lot of constants but want to stay in the same data source.
 - Only load a single category
   ```typst
   #import "@preview/invaria:0.2.0": codata2022.defined_constants
 
-  #defined_constants.speed_of_light_in_vacuum
+  #defined_constants.speedOfLightInVacuum
   ```
 - Only load a single constant
   ```typst
-  #import "@preview/invaria:0.2.0": codata2022.defined_constants.speed_of_light_in_vacuum
+  #import "@preview/invaria:0.2.0": codata2022.defined_constants.speedOfLightInVacuum
 
-  #speed_of_light_in_vacuum
+  #speedOfLightInVacuum
   ```
+- Load all units from the a single category of the CODATA2022 dataset
+  ```typst
+  #import "@local/invaria:0.2.0"
+  #import invaria.codata2022.universal: *
+
+  #speedOfLightInVacuum
+  ```
+- Load all units from the CODATA2022 dataset
+  ```typst
+  #import "@local/invaria:0.2.0"
+  #import invaria.codata2022.all: *
+
+  #speedOfLightInVacuum
+  ```
+  Warning: Imports a lot of variables. Increases the probability of naming clashes.
+
 
 ### Using the Constants
 
-You can use the constants and meta information for example in calculations and
+You can use the constants and meta information for example in calculations and for typing out in your documents.
+
 ```typst
-#import "@preview/invaria:0.2.0": codata2022.defined_constants.speed_of_light_in_vacuum
+#import "@preview/invaria:0.2.0": codata2022.defined_constants.speedOfLightInVacuum
+
+#let earthMoonDistance = 385000e3
+
+In vacuum, light travels with a velocity of #speedOfLightInVacuum.val meters per second.
+That means, that it takes light approximately #calc.round(earthMoonDistance / speedOfLightInVacuum.val, digits: 1) seconds to get from the moon to earth.
+```
+
+#### Unit Libraries
+
+There are various Typst packages to support number and unit formatting e.g., [zero](https://typst.app/universe/package/zero) and [unify](https://typst.app/universe/package/unify).
+
+⚠️ Currently, quantities are stored as `float` values in this package. As a result, integration with the unit packages does not work seamlessly and can be fiddly in some places. See also [issue #11](https://github.com/q-wertz/invaria/issues/11). Suggestions for improving this are very welcome.
+
+**zero**
+- Rendering units using [`quan`](https://github.com/Mc-Zen/zero#1-the-quan-function) (since [version 0.7.0](https://github.com/Mc-Zen/zero/releases/tag/v0.7.0))
+  ```typst
+  #import "@preview/zero:0.7.0"
+  #import "@preview/invaria:0.2.0": codata2022
+  #import codata2022: universal.newtonianConstantOfGravitation
+
+  // Number and unit
+  #zero.quan[#newtonianConstantOfGravitation.val #newtonianConstantOfGravitation.unit]
+
+  // Number, uncertainty and unit
+  #zero.quan[#newtonianConstantOfGravitation.val+-#newtonianConstantOfGravitation.uncert #newtonianConstantOfGravitation.unit]
+  ```
+- Number formatting using [`num`](https://github.com/Mc-Zen/zero#num)
+  ```typst
+  #import "@preview/zero:0.7.0"
+  #import "@preview/invaria:0.2.0": codata2022.defined_constants.speedOfLightInVacuum
+
+  #zero.num(speedOfLightInVacuum.val, exponent: "sci")
+  ```
+
+**unify**
+```typst
 #import "@preview/unify:0.8.1": qty
 
-#let earth-moon-distance = 385000e3
-
-In vacuum, light travels with a velocity of #speed_of_light_in_vacuum.val meters per second.
-That means, that it takes light approximately #qty(calc.round(earth-moon-distance / speed_of_light_in_vacuum.val, digits: 1), speed_of_light_in_vacuum.unit) to get from the moon to earth.
+// Number and unit
+#qty(calc.round(earth-moon-distance / speedOfLightInVacuum.val, digits: 1), speedOfLightInVacuum.unit)
 ```
 
 
@@ -97,6 +148,7 @@ You can use e.g. `pipx` or `uv` to run the `extract_tool.py`:
   pipx run tools/invaria_extract_tool.py
   ```
 
+The script also fills the tytanic unit test files. The tests creates a table with all the constants and their metadata (e.g. `tests/codata2022/test.typ`).
 
 ## References
 [^1]: Eite Tiesinga, Peter J. Mohr, David B. Newell, and Barry N. Taylor (2024), "The 2022 CODATA Recommended Values of the Fundamental Physical Constants" (Web Version 9.0). Database developed by J. Baker, M. Douma, and S. Kotochigova. Available at https://physics.nist.gov/constants, National Institute of Standards and Technology, Gaithersburg, MD 20899.
