@@ -79,7 +79,7 @@ class Constant:
     def typst_variable_name(self) -> str:
         """Get an identifier that can be used as a Typst variable name."""
         # TODO: Could be improved performance wise
-        return (
+        normalized = (
             self.quantity.lower()
             .replace(" ", "_")
             .replace("/", "_per_")
@@ -87,7 +87,12 @@ class Constant:
             .replace(",", "")
             .replace("(", "")
             .replace(")", "")
+            .replace("-", "")
         )
+
+        # Convert to camel case
+        parts = normalized.split("_")
+        return parts[0] + "".join(word.capitalize() for word in parts[1:])
 
     def to_yaml_dict(self) -> dict[str, str | float | int | None | list[str]]:
         """Get a representation, that can be used by PyYAML."""
