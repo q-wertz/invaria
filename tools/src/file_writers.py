@@ -177,7 +177,7 @@ def write_unittest_files(
                 const_qualifier = f"{import_path.stem}.{filename_uncategorized_groups if category is None else category.name.lower()}.{constant.typst_variable_name}"
 
                 uncert_str = (
-                    "none"
+                    '"(exact)"'
                     if constant.uncertainty is None
                     else str(f'zero.num({const_qualifier}.uncert, exponent: "sci")')
                 )
