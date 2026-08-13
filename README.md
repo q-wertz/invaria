@@ -66,14 +66,14 @@ There are various ways to use the imports. A non-exhaustive list of examples:
   ```
 - Load all units from the a single category of the CODATA2022 dataset
   ```typst
-  #import "@local/invaria:0.2.0"
+  #import "@preview/invaria:0.2.0"
   #import invaria.codata2022.universal: *
 
   #speedOfLightInVacuum
   ```
 - Load all units from the CODATA2022 dataset
   ```typst
-  #import "@local/invaria:0.2.0"
+  #import "@preview/invaria:0.2.0"
   #import invaria.codata2022.all: *
 
   #speedOfLightInVacuum
