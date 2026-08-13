@@ -40,10 +40,10 @@ class BasicConstantCategory(ConstantCategory):
 class SpecialConstantCategory(ConstantCategory):
     """Some additional categories defined on the CODATA website."""
 
-    DEFINED_CONSTANT = "Defined constants"
-    NON_SI_UNIT = "Non-SI units"
-    CONVERSION_FACTOR = "Conversion factors for energy equivalents"
-    X_RAY_VALUE = "X-ray values"
+    DEFINED_CONSTANTS = "Defined constants"
+    NON_SI_UNITS = "Non-SI units"
+    CONVERSION_FACTORS = "Conversion factors for energy equivalents"
+    X_RAY_VALUES = "X-ray values"
 
     @property
     @override
@@ -53,9 +53,9 @@ class SpecialConstantCategory(ConstantCategory):
         Unfortunately the database has some exceptions…
         """
         match self:
-            case SpecialConstantCategory.DEFINED_CONSTANT:
+            case SpecialConstantCategory.DEFINED_CONSTANTS:
                 return "/cgi-bin/cuu/Category?view=html&Adopted+values"
-            case SpecialConstantCategory.CONVERSION_FACTOR:
+            case SpecialConstantCategory.CONVERSION_FACTORS:
                 return "/cuu/Constants/factorlist.html"
             case _:
                 return super().url_name
@@ -64,7 +64,7 @@ class SpecialConstantCategory(ConstantCategory):
     @override
     def constant_link_color(self) -> str:
         match self:
-            case SpecialConstantCategory.CONVERSION_FACTOR:
+            case SpecialConstantCategory.CONVERSION_FACTORS:
                 return "#a33c43"
             case _:
                 return super().constant_link_color
