@@ -45,7 +45,7 @@ There are various ways to use the imports. A non-exhaustive list of examples:
   #invaria.codata2022.defined_constants.speedOfLightInVacuum
   ```
   This could be useful in case you want to compare the same constant from different data sources.
-- Youc can only load the CODATA2022 constants
+- You can load the CODATA2022 constants only
   ```typst
   #import "@preview/invaria:0.2.0": codata2022
 
@@ -95,7 +95,7 @@ That means, that it takes light approximately #calc.round(earthMoonDistance / sp
 ```
 
 Output:\
-<img src="gallery/earth-moon.png" width="50%" alt="Example of using invaria for calculating with and printing constants from the CODATA2022 dataset">
+<img src="gallery/earth-moon.png" width="70%" alt="Example of using invaria for calculating with and printing constants from the CODATA2022 dataset">
 
 
 #### Unit Libraries
@@ -138,7 +138,7 @@ There are various Typst packages to support number and unit formatting e.g., [ze
 ```
 
 Output:\
-<img src="gallery/earth-moon-unify.png" width="50%" alt="Example of using invaria together with the unify package">
+<img src="gallery/earth-moon-unify.png" width="70%" alt="Example of using invaria together with the unify package">
 
 ## Development
 
