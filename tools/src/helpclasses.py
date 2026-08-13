@@ -1,38 +1,77 @@
 import dataclasses
 import enum
+from typing import override
 
 from .config_constants import CODATA_BASE_URL
 
 
 class ConstantCategory(enum.StrEnum):
-    """Valid categories.
+    """Base enum class of categories."""
 
-    Have to be spelled as on https://physics.nist.gov/cuu/Constants/index.html.
+    @property
+    def url_name(self) -> str:
+        """Most of the category links can be derived from the category name."""
+        return "/cgi-bin/cuu/Category?view=html&" + self.replace(" ", "+")
+
+    @property
+    def constant_link_color(self) -> str:
+        """The color of the constant links in the category page."""
+        return "#3142BD"
+
+    @property
+    def typst_filename(self) -> str:
+        """The filename for the Typst file of the category."""
+        return f"{self.name.lower()}.typ"
+
+
+class BasicConstantCategory(ConstantCategory):
+    """Valid basic constant categories as defined on the CODATA website and in the CODATA PDF.
+
+    Have to be spelled as the link of the category on https://physics.nist.gov/cuu/Constants/index.html.
+    Exceptions should be handled by an override of the `.url_name` property.
     """
 
     UNIVERSAL = "Universal"
     ELECTROMAGNETIC = "Electromagnetic"
     ATOMIC_AND_NUCLEAR = "Atomic and nuclear"
     PHYSICO_CHEMICAL = "Physico-chemical"
-    DEFINED_CONSTANTS = "Defined constants"
-    NON_SI_UNITS = "Non-SI units"
-    X_RAY_VALUES = "X-ray values"
+
+
+class SpecialConstantCategory(ConstantCategory):
+    """Some additional categories defined on the CODATA website."""
+
+    DEFINED_CONSTANT = "Defined constants"
+    NON_SI_UNIT = "Non-SI units"
+    CONVERSION_FACTOR = "Conversion factors for energy equivalents"
+    X_RAY_VALUE = "X-ray values"
 
     @property
+    @override
     def url_name(self) -> str:
         """Most of the links can just be derived from the category name.
 
-        Unfortunately the database has some exceptions...
+        Unfortunately the database has some exceptions…
         """
         match self:
-            case ConstantCategory.DEFINED_CONSTANTS:
-                return "Adopted+values"
+            case SpecialConstantCategory.DEFINED_CONSTANT:
+                return "/cgi-bin/cuu/Category?view=html&Adopted+values"
+            case SpecialConstantCategory.CONVERSION_FACTOR:
+                return "/cuu/Constants/factorlist.html"
             case _:
-                return self.replace(" ", "+")
+                return super().url_name
+
+    @property
+    @override
+    def constant_link_color(self) -> str:
+        match self:
+            case SpecialConstantCategory.CONVERSION_FACTOR:
+                return "#a33c43"
+            case _:
+                return super().constant_link_color
 
 
-class AtomicNuclearSubcategory(enum.StrEnum):
-    """Valid subcategories of ConstantCategory.ATOMIC_AND_NUCLEAR"""
+class AtomicNuclearSubcategory(ConstantCategory):
+    """Valid subcategories of ATOMIC_AND_NUCLEAR"""
 
     GENERAL = "General"
     ELECTROWEAK = "Electroweak"

@@ -6,12 +6,21 @@
 # ]
 # ///
 
+import logging
 import pathlib
 from typing import Final
 
 from src.file_writers import constants2typst, constants2yaml, write_unittest_files
-from src.helpclasses import Constant, ConstantCategory
+from src.helpclasses import (
+    BasicConstantCategory,
+    Constant,
+    ConstantCategory,
+    SpecialConstantCategory,
+)
 from src.nist_data_readers import read_nist_ascii, scrape_nist
+
+logging.basicConfig()
+
 
 # Some constants
 # CODATA_BASE_URL: Final = ulibp.urlsplit("https://physics.nist.gov")
@@ -31,7 +40,7 @@ if __name__ == "__main__":
     scrape_nist(nist_constants)
 
     nist_categorized_constants: dict[ConstantCategory | None, list[Constant]] = {
-        cc: [] for cc in list(ConstantCategory) + [None]
+        cc: [] for cc in [*BasicConstantCategory, *SpecialConstantCategory] + [None]
     }
     for constant in nist_constants:
         if len(constant.categories) == 0:

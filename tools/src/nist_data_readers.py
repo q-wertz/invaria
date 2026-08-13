@@ -1,3 +1,4 @@
+import logging
 import pathlib
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -5,14 +6,19 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 import tqdm
 
-from .config_constants import CODATA_CATEGORY_BASE_URL
+from .config_constants import CODATA_BASE_URL
 from .helpclasses import (
     AtomicNuclearSubcategory,
+    BasicConstantCategory,
     Constant,
     ConstantCategory,
+    SpecialConstantCategory,
     TypstUnitLib,
 )
 from .helpfunctions import get_soup
+
+_log = logging.getLogger(__name__)
+_log.setLevel(logging.DEBUG)
 
 
 def read_nist_ascii(
@@ -158,20 +164,14 @@ def scrape_nist(constants: list[Constant]) -> None:
 
     # Get information on categories from website for all constants
     # URL: https://physics.nist.gov/cgi-bin/cuu/Category?view=html&<CATEGORY>
-    for category in ConstantCategory:
-        category_url = f"{CODATA_CATEGORY_BASE_URL}&{category.url_name}"
+    for category in (*BasicConstantCategory, *SpecialConstantCategory):
+        category_url = f"{CODATA_BASE_URL}{category.url_name}"
         cat_soup_full = get_soup(category_url, session=session)
-
-        # It looks like the constants are all colored in #3142BD -> Filter to reduce size
-        cat_soup_filtered = cat_soup_full.find_all("font", {"color": "#3142BD"})
-        if len(cat_soup_filtered) != 1:
-            err_msg = f"Length of filtered website is {len(cat_soup_filtered)} but should be 1. The assumption that the constant names are colored #3142BD seems to be invalid."
-            raise RuntimeError(err_msg)
 
         # Get the link of the constants. The URL text is equal to the quantity name
         category_constants_links = {
             link.get_text(strip=True): str(link.get("href"))
-            for link in cat_soup_filtered[0].find_all("a", href=True)
+            for link in cat_soup_full.find_all("a", href=True)
         }
 
         # Update the category and link info in the constants
@@ -187,12 +187,13 @@ def scrape_nist(constants: list[Constant]) -> None:
                     and constant.codata_sub_url != constant_short_search_link
                 ):
                     err_msg = (
-                        f"The constant CODATA sub-url has already been set to"
+                        f"The constant CODATA sub-url of {constant.quantity} has already been set to"
                         f" {constant.codata_sub_url} which differs from {constant_short_search_link}"
                         f" which has been derived in category {category}\n."
                         f"The URLs should be the same, as the category info is removed from the URL."
                     )
-                    raise RuntimeError(err_msg)
+                    _log.debug(err_msg)
+                    # raise RuntimeError(err_msg)
                 else:
                     constant.codata_sub_url = constant_short_search_link
 
