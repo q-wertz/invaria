@@ -64,7 +64,7 @@ There are various ways to use the imports. A non-exhaustive list of examples:
 
   #speedOfLightInVacuum
   ```
-- Load all units from the a single category of the CODATA2022 dataset
+- Load all units from a single category of the CODATA2022 dataset
   ```typst
   #import "@preview/invaria:0.2.0"
   #import invaria.codata2022.universal: *
@@ -90,9 +90,13 @@ You can use the constants and meta information for example in calculations and f
 
 #let earthMoonDistance = 385000e3
 
-In vacuum, light travels with a velocity of #speedOfLightInVacuum.val meters per second.
+In vacuum, light travels at a velocity of #speedOfLightInVacuum.val meters per second.
 That means, that it takes light approximately #calc.round(earthMoonDistance / speedOfLightInVacuum.val, digits: 1) seconds to get from the moon to earth.
 ```
+
+Output:\
+<img src="gallery/earth-moon.png" width="50%" alt="Example of using invaria for calculating with and printing constants from the CODATA2022 dataset">
+
 
 #### Unit Libraries
 
@@ -124,11 +128,17 @@ There are various Typst packages to support number and unit formatting e.g., [ze
 **unify**
 ```typst
 #import "@preview/unify:0.8.1": qty
+#import "@preview/invaria:0.2.0": codata2022
+#import codata2022.all: *
+
+#let earthMoonDistance = 385000e3
 
 // Number and unit
-#qty(calc.round(earth-moon-distance / speedOfLightInVacuum.val, digits: 1), speedOfLightInVacuum.unit)
+#qty(calc.round(earthMoonDistance / speedOfLightInVacuum.val, digits: 1), speedOfLightInVacuum.unit)
 ```
 
+Output:\
+<img src="gallery/earth-moon-unify.png" width="50%" alt="Example of using invaria together with the unify package">
 
 ## Development
 
