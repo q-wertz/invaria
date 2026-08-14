@@ -49,14 +49,14 @@ There are various ways to use the imports. A non-exhaustive list of examples:
   ```typst
   #import "@preview/invaria:0.2.0": codata2022
 
-  #codata2022.defined_constants.speedOfLightInVacuum
+  #codata2022.definedConstants.speedOfLightInVacuum
   ```
   Useful if you are using a lot of constants but want to stay in the same data source.
 - Only load a single category
   ```typst
   #import "@preview/invaria:0.2.0": codata2022.definedConstants
 
-  #defined_constants.speedOfLightInVacuum
+  #definedConstants.speedOfLightInVacuum
   ```
 - Only load a single constant
   ```typst
@@ -120,7 +120,7 @@ There are various Typst packages to support number and unit formatting e.g., [ze
 - Number formatting using [`num`](https://github.com/Mc-Zen/zero#num)
   ```typst
   #import "@preview/zero:0.7.0"
-  #import "@preview/invaria:0.2.0": codata2022.defined_constants.speedOfLightInVacuum
+  #import "@preview/invaria:0.2.0": codata2022.definedConstants.speedOfLightInVacuum
 
   #zero.num(speedOfLightInVacuum.val, exponent: "sci")
   ```
