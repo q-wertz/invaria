@@ -161,7 +161,7 @@ python run tools.invaria_extract_tool
 The script also fills the tytanic unit test files. The tests creates a table with all the constants and their metadata (e.g. `tests/codata2022/test.typ`).
 
 ### Project Structure
-```
+```text
 ├── data-sources                   # The original files from the NIST website
 ├── gallery                        # Images used in the README.md
 ├── invaria_pylib                  # Reusable python code for the `tools`
