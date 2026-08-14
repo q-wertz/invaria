@@ -165,8 +165,8 @@
   uncertainty: 5.2e-37
   unit: kg
   categories:
-  - Conversion factors for energy equivalents
   - Non-SI units
+  - Conversion factors for energy equivalents
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?Rukg
 - quantity: atomic unit of 1st hyperpolarizability
   symbol: ' $e^3a_0^3/E_{\rm h}^2$ '
@@ -354,8 +354,8 @@
   uncertainty: null
   unit: mol^-1
   categories:
-  - Physico-chemical
   - Defined constants
+  - Physico-chemical
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?na
 - quantity: Bohr magneton
   symbol: ' $\mu_{\rm B}$ '
@@ -411,8 +411,8 @@
   uncertainty: null
   unit: J K^-1
   categories:
-  - Physico-chemical
   - Defined constants
+  - Physico-chemical
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?k
 - quantity: Boltzmann constant in eV/K
   symbol: ' $k$ '
@@ -927,8 +927,8 @@
   uncertainty: null
   unit: J
   categories:
-  - Conversion factors for energy equivalents
   - Non-SI units
+  - Conversion factors for energy equivalents
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?Revj
 - quantity: electron volt-kelvin relationship
   symbol: ' $(1 \ {\rm eV})/k$ '
@@ -2046,8 +2046,8 @@
   uncertainty: null
   unit: J Hz^-1
   categories:
-  - Defined constants
   - Universal
+  - Defined constants
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?h
 - quantity: Planck constant in eV/Hz
   symbol: ' $ h $ '
@@ -2303,8 +2303,8 @@
   uncertainty: null
   unit: J s
   categories:
-  - Defined constants
   - Universal
+  - Defined constants
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbar
 - quantity: reduced Planck constant in eV s
   symbol: ' $\hbar$ '
@@ -2320,8 +2320,8 @@
   uncertainty: null
   unit: MeV fm
   categories:
-  - Non-SI units
   - Universal
+  - Non-SI units
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbcmevf
 - quantity: reduced proton Compton wavelength
   symbol: ' $\lbar_{\rm C,p}$ '
@@ -2499,8 +2499,8 @@
   uncertainty: null
   unit: m s^-1
   categories:
-  - Defined constants
   - Universal
+  - Defined constants
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?c
 - quantity: standard acceleration of gravity
   symbol: ' $g_{\rm n}$ '

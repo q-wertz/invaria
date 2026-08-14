@@ -19,3 +19,9 @@ def get_soup(url: str, session: requests.Session) -> BeautifulSoup:
     response = session.get(url, timeout=30)
     response.raise_for_status()
     return BeautifulSoup(response.text, "html.parser")
+
+
+def snake_case2camel_case(string: str) -> str:
+    """Converts a snake_case string to a camelCase one."""
+    parts = string.split("_")
+    return parts[0] + "".join(word.capitalize() for word in parts[1:])

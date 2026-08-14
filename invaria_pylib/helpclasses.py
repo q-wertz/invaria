@@ -3,6 +3,7 @@ import enum
 from typing import override
 
 from .config_constants import CODATA_BASE_URL
+from .helpfunctions import snake_case2camel_case
 
 
 class ConstantCategory(enum.StrEnum):
@@ -21,7 +22,7 @@ class ConstantCategory(enum.StrEnum):
     @property
     def typst_filename(self) -> str:
         """The filename for the Typst file of the category."""
-        return f"{self.name.lower()}.typ"
+        return f"{snake_case2camel_case(self.name.lower())}.typ"
 
 
 class BasicConstantCategory(ConstantCategory):
@@ -130,8 +131,7 @@ class Constant:
         )
 
         # Convert to camel case
-        parts = normalized.split("_")
-        return parts[0] + "".join(word.capitalize() for word in parts[1:])
+        return snake_case2camel_case(normalized)
 
     def to_yaml_dict(self) -> dict[str, str | float | int | None | list[str]]:
         """Get a representation, that can be used by PyYAML."""

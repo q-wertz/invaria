@@ -42,7 +42,7 @@ There are various ways to use the imports. A non-exhaustive list of examples:
   ```
   #import "@preview/invaria:0.2.0"
 
-  #invaria.codata2022.defined_constants.speedOfLightInVacuum
+  #invaria.codata2022.definedConstants.speedOfLightInVacuum
   ```
   This could be useful in case you want to compare the same constant from different data sources.
 - You can load the CODATA2022 constants only
@@ -54,13 +54,13 @@ There are various ways to use the imports. A non-exhaustive list of examples:
   Useful if you are using a lot of constants but want to stay in the same data source.
 - Only load a single category
   ```typst
-  #import "@preview/invaria:0.2.0": codata2022.defined_constants
+  #import "@preview/invaria:0.2.0": codata2022.definedConstants
 
   #defined_constants.speedOfLightInVacuum
   ```
 - Only load a single constant
   ```typst
-  #import "@preview/invaria:0.2.0": codata2022.defined_constants.speedOfLightInVacuum
+  #import "@preview/invaria:0.2.0": codata2022.definedConstants.speedOfLightInVacuum
 
   #speedOfLightInVacuum
   ```
@@ -86,7 +86,7 @@ There are various ways to use the imports. A non-exhaustive list of examples:
 You can use the constants and meta information for example in calculations and for typing out in your documents.
 
 ```typst
-#import "@preview/invaria:0.2.0": codata2022.defined_constants.speedOfLightInVacuum
+#import "@preview/invaria:0.2.0": codata2022.definedConstants.speedOfLightInVacuum
 
 #let earthMoonDistance = 385000e3
 
@@ -144,21 +144,40 @@ Output:\
 
 The idea of this library is to use a python script to extracts the information from various data sources, combine it, structure it and output the Typst files.
 
-The tool uses the NIST ALLASCII table as basis and enriches it with information scraped from the NIST CODATA website.
+The tool uses the [NIST allascii table](https://physics.nist.gov/cuu/Constants/Table/allascii.txt) as basis and enriches it with information scraped from the [NIST CODATA website](https://physics.nist.gov/cuu/Constants/index.html).
 In theory the website contains all the information. But the original goal was, to read the information from the text and PDF files.
 Would still be nice to be independent of the NIST website, but retrieving the information from the PDF turned out to be more complicated than initially expected.
 
-You can use e.g. `pipx` or `uv` to run the `extract_tool.py`:
-- `uv`:
-  ```shell
-  uv run tools/invaria_extract_tool.py
-  ```
-- `pipx`:
-  ```shell
-  pipx run tools/invaria_extract_tool.py
-  ```
+You can use e.g. [`uv`](https://docs.astral.sh/uv/) to run the `extract_tool.py` without caring much about the dependencies:
+```shell
+uv run -m tools.invaria_extract_tool
+```
+
+If you take care about the installation of the packages yourself you can use
+```shell
+python run tools.invaria_extract_tool
+```
 
 The script also fills the tytanic unit test files. The tests creates a table with all the constants and their metadata (e.g. `tests/codata2022/test.typ`).
+
+### Project Structure
+```
+├── data-sources                   # The original files from the NIST website
+├── gallery                        # Images used in the README.md
+├── invaria_pylib                  # Reusable python code for the `tools`
+├── LICENSE
+├── pyproject.toml
+├── README.md
+├── src                            # Typst source code
+│   ├── CODATA2022                 # Folder containing a full set of constants
+│   ├── common_packages.typ        # Package imports required in multiple Typst files
+│   └── lib.typ                    # Entrypoint of the Typst package
+├── tests                          # Tytanic tests (Typst)
+├── tools                          # (Python) scripts assisting in generating the Typst package
+│   └── invaria_extract_tool.py
+├── typst.toml
+└── uv.lock
+```
 
 ## References
 [^1]: Eite Tiesinga, Peter J. Mohr, David B. Newell, and Barry N. Taylor (2024), "The 2022 CODATA Recommended Values of the Fundamental Physical Constants" (Web Version 9.0). Database developed by J. Baker, M. Douma, and S. Kotochigova. Available at https://physics.nist.gov/constants, National Institute of Standards and Technology, Gaithersburg, MD 20899.

@@ -2,5 +2,5 @@
 
 #import "universal.typ": *
 #import "electromagnetic.typ": *
-#import "atomic_and_nuclear.typ": *
-#import "physico_chemical.typ": *
+#import "atomicAndNuclear.typ": *
+#import "physicoChemical.typ": *

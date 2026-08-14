@@ -10,20 +10,23 @@ import logging
 import pathlib
 from typing import Final
 
-from src.file_writers import constants2typst, constants2yaml, write_unittest_files
-from src.helpclasses import (
+from invaria_pylib.file_writers import (
+    constants2typst,
+    constants2yaml,
+    write_unittest_files,
+)
+from invaria_pylib.helpclasses import (
     BasicConstantCategory,
     Constant,
     ConstantCategory,
     SpecialConstantCategory,
 )
-from src.nist_data_readers import read_nist_ascii, scrape_nist
+from invaria_pylib.nist_data_readers import read_nist_ascii, scrape_nist
 
 logging.basicConfig()
 
 
 # Some constants
-# CODATA_BASE_URL: Final = ulibp.urlsplit("https://physics.nist.gov")
 CODATA_BASE_URL: Final[str] = "https://physics.nist.gov"
 CODATA_CATEGORY_BASE_URL: Final[str] = (
     f"{CODATA_BASE_URL}/cgi-bin/cuu/Category?view=html"

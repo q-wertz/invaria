@@ -190,7 +190,7 @@ def write_unittest_files(
             )
 
             for constant in constants:
-                const_qualifier = f"{import_path.stem}.{filename_uncategorized_groups if category is None else category.name.lower()}.{constant.typst_variable_name}"
+                const_qualifier = f"{import_path.stem}.{filename_uncategorized_groups if category is None else category.typst_filename.replace('.typ', '')}.{constant.typst_variable_name}"
 
                 uncert_str = (
                     '"(exact)"'
