@@ -13,12 +13,12 @@ The constants are grouped into categories just like in the NIST CODATA database.
 
 Each constant is a [Typst dictionary](https://typst.app/docs/reference/foundations/dictionary/) and its variable name is the normalized quantity name. The dictionary contains the various information of the constant e.g.
 ```typst
-#let electronMass = (
+#let electron-mass = (
   val: 9.1093837139e-31,
   uncert: 2.8e-40,
   unit: "kg",
-  symbol: "$m_{\rm e}$",
-  quantity: "electron mass",
+  symbol: $m_upright(e)$,
+  quantity: "electron mass"
 )
 ```
 
@@ -42,41 +42,41 @@ There are various ways to use the imports. A non-exhaustive list of examples:
   ```
   #import "@preview/invaria:0.2.0"
 
-  #invaria.codata2022.definedConstants.speedOfLightInVacuum
+  #invaria.codata2022.defined-constants.speed-of-light-in-vacuum
   ```
   This could be useful in case you want to compare the same constant from different data sources.
 - You can load the CODATA2022 constants only
   ```typst
   #import "@preview/invaria:0.2.0": codata2022
 
-  #codata2022.definedConstants.speedOfLightInVacuum
+  #codata2022.defined-constants.speed-of-light-in-vacuum
   ```
   Useful if you are using a lot of constants but want to stay in the same data source.
 - Only load a single category
   ```typst
-  #import "@preview/invaria:0.2.0": codata2022.definedConstants
+  #import "@preview/invaria:0.2.0": codata2022.defined-constants
 
-  #definedConstants.speedOfLightInVacuum
+  #defined-constants.speed-of-light-in-vacuum
   ```
 - Only load a single constant
   ```typst
-  #import "@preview/invaria:0.2.0": codata2022.definedConstants.speedOfLightInVacuum
+  #import "@preview/invaria:0.2.0": codata2022.defined-constants.speed-of-light-in-vacuum
 
-  #speedOfLightInVacuum
+  #speed-of-light-in-vacuum
   ```
 - Load all units from a single category of the CODATA2022 dataset
   ```typst
   #import "@preview/invaria:0.2.0"
   #import invaria.codata2022.universal: *
 
-  #speedOfLightInVacuum
+  #speed-of-light-in-vacuum
   ```
 - Load all units from the CODATA2022 dataset
   ```typst
   #import "@preview/invaria:0.2.0"
   #import invaria.codata2022.all: *
 
-  #speedOfLightInVacuum
+  #speed-of-light-in-vacuum
   ```
   Warning: Imports a lot of variables. Increases the probability of naming clashes.
 
@@ -86,12 +86,12 @@ There are various ways to use the imports. A non-exhaustive list of examples:
 You can use the constants and meta information for example in calculations and for typing out in your documents.
 
 ```typst
-#import "@preview/invaria:0.2.0": codata2022.definedConstants.speedOfLightInVacuum
+#import "@preview/invaria:0.2.0": codata2022.defined-constants.speed-of-light-in-vacuum
 
-#let earthMoonDistance = 385000e3
+#let earth-moon-dist = 385000e3
 
-In vacuum, light travels at a velocity of #speedOfLightInVacuum.val meters per second.
-That means, that it takes light approximately #calc.round(earthMoonDistance / speedOfLightInVacuum.val, digits: 1) seconds to get from the moon to earth.
+In vacuum, light travels at a velocity of #speed-of-light-in-vacuum.val meters per second.
+That means, that it takes light approximately #calc.round(earth-moon-dist / speed-of-light-in-vacuum.val, digits: 1) seconds to get from the moon to earth.
 ```
 
 Output:\
@@ -120,9 +120,9 @@ There are various Typst packages to support number and unit formatting e.g., [ze
 - Number formatting using [`num`](https://github.com/Mc-Zen/zero#num)
   ```typst
   #import "@preview/zero:0.7.0"
-  #import "@preview/invaria:0.2.0": codata2022.definedConstants.speedOfLightInVacuum
+  #import "@preview/invaria:0.2.0": codata2022.defined-constants.speed-of-light-in-vacuum
 
-  #zero.num(speedOfLightInVacuum.val, exponent: "sci")
+  #zero.num(speed-of-light-in-vacuum.val, exponent: "sci")
   ```
 
 **unify**
@@ -131,10 +131,10 @@ There are various Typst packages to support number and unit formatting e.g., [ze
 #import "@preview/invaria:0.2.0": codata2022
 #import codata2022.all: *
 
-#let earthMoonDistance = 385000e3
+#let earth-moon-dist = 385000e3
 
 // Number and unit
-#qty(calc.round(earthMoonDistance / speedOfLightInVacuum.val, digits: 1), speedOfLightInVacuum.unit)
+#qty(calc.round(earth-moon-dist / speed-of-light-in-vacuum.val, digits: 1), speed-of-light-in-vacuum.unit)
 ```
 
 Output:\
