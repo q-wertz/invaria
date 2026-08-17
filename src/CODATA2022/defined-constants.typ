@@ -8,7 +8,7 @@
 \\ National Institute of Standards and Technology, Gaithersburg, MD 20899.
 
 
-#import "../common_packages.typ": *
+#import "../common-packages.typ": *
 
 #let avogadro-constant = (
   val: 6.02214076e+23,

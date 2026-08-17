@@ -8,7 +8,7 @@
 \\ National Institute of Standards and Technology, Gaithersburg, MD 20899.
 
 
-#import "../common_packages.typ": *
+#import "../common-packages.typ": *
 
 #let characteristic-impedance-of-vacuum = (
   val: 376.730313412,

@@ -8,7 +8,7 @@
 \\ National Institute of Standards and Technology, Gaithersburg, MD 20899.
 
 
-#import "../common_packages.typ": *
+#import "../common-packages.typ": *
 
 #let alpha-particleelectron-mass-ratio = (
   val: 7294.29954171,

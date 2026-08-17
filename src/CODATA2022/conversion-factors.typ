@@ -8,7 +8,7 @@
 \\ National Institute of Standards and Technology, Gaithersburg, MD 20899.
 
 
-#import "../common_packages.typ": *
+#import "../common-packages.typ": *
 
 #let atomic-mass-unitelectron-volt-relationship = (
   val: 931494103.72,

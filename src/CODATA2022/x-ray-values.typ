@@ -8,7 +8,7 @@
 \\ National Institute of Standards and Technology, Gaithersburg, MD 20899.
 
 
-#import "../common_packages.typ": *
+#import "../common-packages.typ": *
 
 #let angstrom-star = (
   val: 1.00001495e-10,
