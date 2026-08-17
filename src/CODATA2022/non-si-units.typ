@@ -10,224 +10,224 @@
 
 #import "../common_packages.typ": *
 
-#let atomicMassUnitkilogramRelationship = (
+#let atomic-mass-unitkilogram-relationship = (
   val: 1.66053906892e-27,
   uncert: 5.2e-37,
   unit: "kg",
   symbol: $1 med upright(u)$,
   quantity: "atomic mass unit-kilogram relationship"
 )
-#let atomicUnitOf1stHyperpolarizability = (
+#let atomic-unit-of-1st-hyperpolarizability = (
   val: 3.2063612996e-53,
   uncert: 1.5e-62,
   unit: "C^3 m^3 J^-2",
   symbol: $e^3 a_0^3 \/ E_upright(h)^2$,
   quantity: "atomic unit of 1st hyperpolarizability"
 )
-#let atomicUnitOf2ndHyperpolarizability = (
+#let atomic-unit-of-2nd-hyperpolarizability = (
   val: 6.2353799735e-65,
   uncert: 3.9e-74,
   unit: "C^4 m^4 J^-3",
   symbol: $e^4 a_0^4 \/ E_upright(h)^3$,
   quantity: "atomic unit of 2nd hyperpolarizability"
 )
-#let atomicUnitOfAction = (
+#let atomic-unit-of-action = (
   val: 1.054571817e-34,
   uncert: none,
   unit: "J s",
   symbol: $planck$,
   quantity: "atomic unit of action"
 )
-#let atomicUnitOfCharge = (
+#let atomic-unit-of-charge = (
   val: 1.602176634e-19,
   uncert: none,
   unit: "C",
   symbol: $e$,
   quantity: "atomic unit of charge"
 )
-#let atomicUnitOfChargeDensity = (
+#let atomic-unit-of-charge-density = (
   val: 1081202386770.0,
   uncert: 510.0,
   unit: " C m^-3",
   symbol: $e \/ a_0^3$,
   quantity: "atomic unit of charge density"
 )
-#let atomicUnitOfCurrent = (
+#let atomic-unit-of-current = (
   val: 0.0066236182375082,
   uncert: 7.2e-15,
   unit: " A",
   symbol: $e E_upright(h) \/ planck$,
   quantity: "atomic unit of current"
 )
-#let atomicUnitOfElectricField = (
+#let atomic-unit-of-electric-field = (
   val: 514220675112.0,
   uncert: 80.0,
   unit: " V m^-1",
   symbol: $E_upright(h) \/ e a_0$,
   quantity: "atomic unit of electric field"
 )
-#let atomicUnitOfElectricFieldGradient = (
+#let atomic-unit-of-electric-field-gradient = (
   val: 9.7173624424e+21,
   uncert: 3000000000000.0,
   unit: " V m^-2",
   symbol: $E_upright(h) \/ e a_0^2$,
   quantity: "atomic unit of electric field gradient"
 )
-#let atomicUnitOfElectricPolarizability = (
+#let atomic-unit-of-electric-polarizability = (
   val: 1.64877727212e-41,
   uncert: 5.1e-51,
   unit: "C^2 m^2 J^-1",
   symbol: $e^2 a_0^2 \/ E_upright(h)$,
   quantity: "atomic unit of electric polarizability"
 )
-#let atomicUnitOfElectricPotential = (
+#let atomic-unit-of-electric-potential = (
   val: 27.211386245981,
   uncert: 3e-11,
   unit: "V",
   symbol: $E_upright(h) \/ e$,
   quantity: "atomic unit of electric potential"
 )
-#let atomicUnitOfEnergy = (
+#let atomic-unit-of-energy = (
   val: 4.359744722206e-18,
   uncert: 4.8e-30,
   unit: "J",
   symbol: $E_upright(h)$,
   quantity: "atomic unit of energy"
 )
-#let atomicUnitOfForce = (
+#let atomic-unit-of-force = (
   val: 8.2387235038e-08,
   uncert: 1.3e-17,
   unit: " N",
   symbol: $E_upright(h) \/ a_0$,
   quantity: "atomic unit of force"
 )
-#let atomicUnitOfLength = (
+#let atomic-unit-of-length = (
   val: 5.29177210544e-11,
   uncert: 8.2e-21,
   unit: "m",
   symbol: $a_0$,
   quantity: "atomic unit of length"
 )
-#let atomicUnitOfMagnetizability = (
+#let atomic-unit-of-magnetizability = (
   val: 7.8910365794e-29,
   uncert: 4.9e-38,
   unit: "J T^-2",
   symbol: $e^2 a_0^2 \/ m_upright(e)$,
   quantity: "atomic unit of magnetizability"
 )
-#let atomicUnitOfMass = (
+#let atomic-unit-of-mass = (
   val: 9.1093837139e-31,
   uncert: 2.8e-40,
   unit: "kg",
   symbol: $m_upright(e)$,
   quantity: "atomic unit of mass"
 )
-#let atomicUnitOfMomentum = (
+#let atomic-unit-of-momentum = (
   val: 1.99285191545e-24,
   uncert: 3.1e-34,
   unit: "kg m s^-1",
   symbol: $planck \/ a_0$,
   quantity: "atomic unit of momentum"
 )
-#let atomicUnitOfPermittivity = (
+#let atomic-unit-of-permittivity = (
   val: 1.1126500562e-10,
   uncert: 1.7e-20,
   unit: "F m^-1",
   symbol: $e^2 \/ a_0 E_upright(h)$,
   quantity: "atomic unit of permittivity"
 )
-#let atomicUnitOfTime = (
+#let atomic-unit-of-time = (
   val: 2.4188843265864e-17,
   uncert: 2.6e-29,
   unit: "s",
   symbol: $planck \/ E_upright(h)$,
   quantity: "atomic unit of time"
 )
-#let atomicUnitOfVelocity = (
+#let atomic-unit-of-velocity = (
   val: 2187691.26216,
   uncert: 0.00034,
   unit: "m s^-1",
   symbol: $a_0 E_upright(h) \/ planck$,
   quantity: "atomic unit of velocity"
 )
-#let electronVoltjouleRelationship = (
+#let electron-voltjoule-relationship = (
   val: 1.602176634e-19,
   uncert: none,
   unit: "J",
   symbol: $1 med upright(e) V$,
   quantity: "electron volt-joule relationship"
 )
-#let naturalUnitOfAction = (
+#let natural-unit-of-action = (
   val: 1.054571817e-34,
   uncert: none,
   unit: "J s",
   symbol: $planck$,
   quantity: "natural unit of action"
 )
-#let naturalUnitOfActionInEvS = (
+#let natural-unit-of-action-in-ev-s = (
   val: 6.582119569e-16,
   uncert: none,
   unit: "eV s",
   symbol: $planck$,
   quantity: "natural unit of action in eV s"
 )
-#let naturalUnitOfEnergy = (
+#let natural-unit-of-energy = (
   val: 8.187105788e-14,
   uncert: 2.6e-23,
   unit: "J",
   symbol: $m_upright(e) c^2$,
   quantity: "natural unit of energy"
 )
-#let naturalUnitOfEnergyInMev = (
+#let natural-unit-of-energy-in-mev = (
   val: 0.51099895069,
   uncert: 1.6e-10,
   unit: " MeV",
   symbol: $m_upright(e) c^2$,
   quantity: "natural unit of energy in MeV"
 )
-#let naturalUnitOfLength = (
+#let natural-unit-of-length = (
   val: 3.8615926744e-13,
   uncert: 1.2e-22,
   unit: "m",
   symbol: $ƛ_upright(C)$,
   quantity: "natural unit of length"
 )
-#let naturalUnitOfMass = (
+#let natural-unit-of-mass = (
   val: 9.1093837139e-31,
   uncert: 2.8e-40,
   unit: "kg",
   symbol: $m_upright(e)$,
   quantity: "natural unit of mass"
 )
-#let naturalUnitOfMomentum = (
+#let natural-unit-of-momentum = (
   val: 2.73092453446e-22,
   uncert: 8.5e-32,
   unit: "kg m s^-1",
   symbol: $m_upright(e) c$,
   quantity: "natural unit of momentum"
 )
-#let naturalUnitOfMomentumInMevPerC = (
+#let natural-unit-of-momentum-in-mev-per-c = (
   val: 0.51099895069,
   uncert: 1.6e-10,
   unit: " MeV/c",
   symbol: $m_upright(e) c$,
   quantity: "natural unit of momentum in MeV/c"
 )
-#let naturalUnitOfTime = (
+#let natural-unit-of-time = (
   val: 1.28808866644e-21,
   uncert: 4e-31,
   unit: "s",
   symbol: $planck \/ m_upright(e) c^2$,
   quantity: "natural unit of time"
 )
-#let naturalUnitOfVelocity = (
+#let natural-unit-of-velocity = (
   val: 299792458,
   uncert: none,
   unit: "m s^-1",
   symbol: $c$,
   quantity: "natural unit of velocity"
 )
-#let reducedPlanckConstantTimesCInMevFm = (
+#let reduced-planck-constant-times-c-in-mev-fm = (
   val: 197.3269804,
   uncert: none,
   unit: "MeV fm",

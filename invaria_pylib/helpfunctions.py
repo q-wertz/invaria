@@ -25,3 +25,8 @@ def snake_case2camel_case(string: str) -> str:
     """Converts a snake_case string to a camelCase one."""
     parts = string.split("_")
     return parts[0] + "".join(word.capitalize() for word in parts[1:])
+
+
+def snake_case2kebab_case(string: str) -> str:
+    """Converts a snake_case string to a kebab-case one."""
+    return string.replace("_", "-")

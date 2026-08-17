@@ -10,42 +10,42 @@
 
 #import "../common_packages.typ": *
 
-#let angstromStar = (
+#let angstrom-star = (
   val: 1.00001495e-10,
   uncert: 9e-17,
   unit: "m",
   symbol: $AA^*$,
   quantity: "Angstrom star"
 )
-#let copperXUnit = (
+#let copper-x-unit = (
   val: 1.00207697e-13,
   uncert: 2.8e-20,
   unit: "m",
   symbol: $upright(x) u(upright(C) u K alpha_upright(1))$,
   quantity: "Copper x unit"
 )
-#let latticeParameterOfSilicon = (
+#let lattice-parameter-of-silicon = (
   val: 5.431020511e-10,
   uncert: 8.9e-18,
   unit: " m",
   symbol: $a$,
   quantity: "lattice parameter of silicon"
 )
-#let latticeSpacingOfIdealSi220 = (
+#let lattice-spacing-of-ideal-si-220 = (
   val: 1.920155716e-10,
   uncert: 3.2e-18,
   unit: " m",
   symbol: $d_220$,
   quantity: "lattice spacing of ideal Si (220)"
 )
-#let molarVolumeOfSilicon = (
+#let molar-volume-of-silicon = (
   val: 1.205883199e-05,
   uncert: 6e-13,
   unit: "m^3 mol^-1",
   symbol: $V_upright(m) (S i)$,
   quantity: "molar volume of silicon"
 )
-#let molybdenumXUnit = (
+#let molybdenum-x-unit = (
   val: 1.00209952e-13,
   uncert: 5.3e-20,
   unit: "m",

@@ -1244,8 +1244,8 @@
   uncertainty: 2.1e-08
   unit: null
   categories:
-  - Conversion factors for energy equivalents
   - Atomic and nuclear
+  - Conversion factors for energy equivalents
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?alphinv
 - quantity: inverse meter-atomic mass unit relationship
   symbol: ' $(1 \ {\rm m}^{-1})h/c$ '
@@ -2046,8 +2046,8 @@
   uncertainty: null
   unit: J Hz^-1
   categories:
-  - Universal
   - Defined constants
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?h
 - quantity: Planck constant in eV/Hz
   symbol: ' $ h $ '
@@ -2303,8 +2303,8 @@
   uncertainty: null
   unit: J s
   categories:
-  - Universal
   - Defined constants
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbar
 - quantity: reduced Planck constant in eV s
   symbol: ' $\hbar$ '
@@ -2320,8 +2320,8 @@
   uncertainty: null
   unit: MeV fm
   categories:
-  - Universal
   - Non-SI units
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbcmevf
 - quantity: reduced proton Compton wavelength
   symbol: ' $\lbar_{\rm C,p}$ '
@@ -2499,8 +2499,8 @@
   uncertainty: null
   unit: m s^-1
   categories:
-  - Universal
   - Defined constants
+  - Universal
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?c
 - quantity: standard acceleration of gravity
   symbol: ' $g_{\rm n}$ '

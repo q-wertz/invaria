@@ -10,175 +10,175 @@
 
 #import "../common_packages.typ": *
 
-#let bohrMagneton = (
+#let bohr-magneton = (
   val: 9.2740100657e-24,
   uncert: 2.9e-33,
   unit: "J T^-1",
   symbol: $mu_upright(B)$,
   quantity: "Bohr magneton"
 )
-#let bohrMagnetonInEvPerT = (
+#let bohr-magneton-in-ev-per-t = (
   val: 5.7883817982e-05,
   uncert: 1.8e-14,
   unit: " eV T^-1",
   symbol: $mu_upright(B)$,
   quantity: "Bohr magneton in eV/T"
 )
-#let bohrMagnetonInHzPerT = (
+#let bohr-magneton-in-hz-per-t = (
   val: 13996244917.1,
   uncert: 4.4,
   unit: " Hz T^-1",
   symbol: $mu_upright(B) \/ h$,
   quantity: "Bohr magneton in Hz/T"
 )
-#let bohrMagnetonInInverseMeterPerTesla = (
+#let bohr-magneton-in-inverse-meter-per-tesla = (
   val: 46.686447719,
   uncert: 1.5e-08,
   unit: "m^-1 T^-1",
   symbol: $mu_upright(B) \/ h c$,
   quantity: "Bohr magneton in inverse meter per tesla"
 )
-#let bohrMagnetonInKPerT = (
+#let bohr-magneton-in-k-per-t = (
   val: 0.67171381472,
   uncert: 2.1e-10,
   unit: " K T^-1",
   symbol: $mu_upright(B) \/ k$,
   quantity: "Bohr magneton in K/T"
 )
-#let conductanceQuantum = (
+#let conductance-quantum = (
   val: 7.748091729e-05,
   uncert: none,
   unit: "S",
   symbol: $G_0$,
   quantity: "conductance quantum"
 )
-#let conventionalValueOfAmpere90 = (
+#let conventional-value-of-ampere90 = (
   val: 1.00000008887,
   uncert: none,
   unit: "A",
   symbol: $A_90$,
   quantity: "conventional value of ampere-90"
 )
-#let conventionalValueOfCoulomb90 = (
+#let conventional-value-of-coulomb90 = (
   val: 1.00000008887,
   uncert: none,
   unit: "C",
   symbol: $C_90$,
   quantity: "conventional value of coulomb-90"
 )
-#let conventionalValueOfFarad90 = (
+#let conventional-value-of-farad90 = (
   val: 0.9999999822,
   uncert: none,
   unit: "F",
   symbol: $F_90$,
   quantity: "conventional value of farad-90"
 )
-#let conventionalValueOfHenry90 = (
+#let conventional-value-of-henry90 = (
   val: 1.00000001779,
   uncert: none,
   unit: "H",
   symbol: $H_90$,
   quantity: "conventional value of henry-90"
 )
-#let conventionalValueOfJosephsonConstant = (
+#let conventional-value-of-josephson-constant = (
   val: 483597900000000.0,
   uncert: none,
   unit: "Hz V^-1",
   symbol: $K_(upright(J) - 90)$,
   quantity: "conventional value of Josephson constant"
 )
-#let conventionalValueOfOhm90 = (
+#let conventional-value-of-ohm90 = (
   val: 1.00000001779,
   uncert: none,
   unit: "ohm",
   symbol: $italic(Omega)_90$,
   quantity: "conventional value of ohm-90"
 )
-#let conventionalValueOfVolt90 = (
+#let conventional-value-of-volt90 = (
   val: 1.00000010666,
   uncert: none,
   unit: "V",
   symbol: $V_90$,
   quantity: "conventional value of volt-90"
 )
-#let conventionalValueOfVonKlitzingConstant = (
+#let conventional-value-of-von-klitzing-constant = (
   val: 25812.807,
   uncert: none,
   unit: "ohm",
   symbol: $R_(upright(K) - 90)$,
   quantity: "conventional value of von Klitzing constant"
 )
-#let conventionalValueOfWatt90 = (
+#let conventional-value-of-watt90 = (
   val: 1.00000019553,
   uncert: none,
   unit: "W",
   symbol: $W_90$,
   quantity: "conventional value of watt-90"
 )
-#let elementaryCharge = (
+#let elementary-charge = (
   val: 1.602176634e-19,
   uncert: none,
   unit: "C",
   symbol: $e$,
   quantity: "elementary charge"
 )
-#let elementaryChargeOverHbar = (
+#let elementary-charge-over-hbar = (
   val: 1519267447000000.0,
   uncert: none,
   unit: "A J^-1",
   symbol: $e \/ planck$,
   quantity: "elementary charge over h-bar"
 )
-#let inverseOfConductanceQuantum = (
+#let inverse-of-conductance-quantum = (
   val: 12906.40372,
   uncert: none,
   unit: "ohm",
   symbol: $G_0^(-1)$,
   quantity: "inverse of conductance quantum"
 )
-#let josephsonConstant = (
+#let josephson-constant = (
   val: 483597848400000.0,
   uncert: none,
   unit: "Hz V^-1",
   symbol: $K_upright(J)$,
   quantity: "Josephson constant"
 )
-#let nuclearMagneton = (
+#let nuclear-magneton = (
   val: 5.0507837393e-27,
   uncert: 1.6e-36,
   unit: "J T^-1",
   symbol: $mu_upright(N)$,
   quantity: "nuclear magneton"
 )
-#let nuclearMagnetonInEvPerT = (
+#let nuclear-magneton-in-ev-per-t = (
   val: 3.15245125417e-08,
   uncert: 9.8e-18,
   unit: " eV T^-1",
   symbol: $mu_upright(N)$,
   quantity: "nuclear magneton in eV/T"
 )
-#let nuclearMagnetonInInverseMeterPerTesla = (
+#let nuclear-magneton-in-inverse-meter-per-tesla = (
   val: 0.0254262341009,
   uncert: 7.9e-12,
   unit: " m^-1 T^-1",
   symbol: $mu_upright(N) \/ h c$,
   quantity: "nuclear magneton in inverse meter per tesla"
 )
-#let nuclearMagnetonInKPerT = (
+#let nuclear-magneton-in-k-per-t = (
   val: 0.00036582677706,
   uncert: 1.1e-13,
   unit: " K T^-1",
   symbol: $mu_upright(N) \/ k$,
   quantity: "nuclear magneton in K/T"
 )
-#let nuclearMagnetonInMhzPerT = (
+#let nuclear-magneton-in-mhz-per-t = (
   val: 7.6225932188,
   uncert: 2.4e-09,
   unit: " MHz T^-1",
   symbol: $mu_upright(N) \/ h$,
   quantity: "nuclear magneton in MHz/T"
 )
-#let vonKlitzingConstant = (
+#let von-klitzing-constant = (
   val: 25812.80745,
   uncert: none,
   unit: "ohm",

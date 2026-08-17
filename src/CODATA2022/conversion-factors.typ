@@ -10,399 +10,399 @@
 
 #import "../common_packages.typ": *
 
-#let atomicMassUnitelectronVoltRelationship = (
+#let atomic-mass-unitelectron-volt-relationship = (
   val: 931494103.72,
   uncert: 0.29,
   unit: "eV",
   symbol: $(1 med upright(u)) c^2$,
   quantity: "atomic mass unit-electron volt relationship"
 )
-#let atomicMassUnithartreeRelationship = (
+#let atomic-mass-unithartree-relationship = (
   val: 34231776.922,
   uncert: 0.011,
   unit: "E_h",
   symbol: $(1 med upright(u)) c^2$,
   quantity: "atomic mass unit-hartree relationship"
 )
-#let atomicMassUnithertzRelationship = (
+#let atomic-mass-unithertz-relationship = (
   val: 2.25234272185e+23,
   uncert: 70000000000000.0,
   unit: " Hz",
   symbol: $(1 med upright(u)) c^2 \/ h$,
   quantity: "atomic mass unit-hertz relationship"
 )
-#let atomicMassUnitinverseMeterRelationship = (
+#let atomic-mass-unitinverse-meter-relationship = (
   val: 751300662090000.0,
   uncert: 230000.0,
   unit: " m^-1",
   symbol: $(1 med upright(u)) c \/ h$,
   quantity: "atomic mass unit-inverse meter relationship"
 )
-#let atomicMassUnitjouleRelationship = (
+#let atomic-mass-unitjoule-relationship = (
   val: 1.49241808768e-10,
   uncert: 4.6e-20,
   unit: "J",
   symbol: $m_upright(u) c^2$,
   quantity: "atomic mass unit-joule relationship"
 )
-#let atomicMassUnitkelvinRelationship = (
+#let atomic-mass-unitkelvin-relationship = (
   val: 10809540206700.0,
   uncert: 3400.0,
   unit: " K",
   symbol: $(1 med upright(u)) c^2 \/ k$,
   quantity: "atomic mass unit-kelvin relationship"
 )
-#let atomicMassUnitkilogramRelationship = (
+#let atomic-mass-unitkilogram-relationship = (
   val: 1.66053906892e-27,
   uncert: 5.2e-37,
   unit: "kg",
   symbol: $1 med upright(u)$,
   quantity: "atomic mass unit-kilogram relationship"
 )
-#let electronVoltatomicMassUnitRelationship = (
+#let electron-voltatomic-mass-unit-relationship = (
   val: 1.07354410083e-09,
   uncert: 3.3e-19,
   unit: " u",
   symbol: $(1 med upright(e) V) \/ c^2$,
   quantity: "electron volt-atomic mass unit relationship"
 )
-#let electronVolthartreeRelationship = (
+#let electron-volthartree-relationship = (
   val: 0.036749322175665,
   uncert: 4e-14,
   unit: " E_h",
   symbol: $1 med upright(e) V$,
   quantity: "electron volt-hartree relationship"
 )
-#let electronVolthertzRelationship = (
+#let electron-volthertz-relationship = (
   val: 241798924200000.0,
   uncert: none,
   unit: "Hz",
   symbol: $(1 med upright(e) V) \/ h$,
   quantity: "electron volt-hertz relationship"
 )
-#let electronVoltinverseMeterRelationship = (
+#let electron-voltinverse-meter-relationship = (
   val: 806554.3937,
   uncert: none,
   unit: "m^-1",
   symbol: $(1 med upright(e) V) \/ h c$,
   quantity: "electron volt-inverse meter relationship"
 )
-#let electronVoltjouleRelationship = (
+#let electron-voltjoule-relationship = (
   val: 1.602176634e-19,
   uncert: none,
   unit: "J",
   symbol: $1 med upright(e) V$,
   quantity: "electron volt-joule relationship"
 )
-#let electronVoltkelvinRelationship = (
+#let electron-voltkelvin-relationship = (
   val: 11604.51812,
   uncert: none,
   unit: "K",
   symbol: $(1 med upright(e) V) \/ k$,
   quantity: "electron volt-kelvin relationship"
 )
-#let electronVoltkilogramRelationship = (
+#let electron-voltkilogram-relationship = (
   val: 1.782661921e-36,
   uncert: none,
   unit: "kg",
   symbol: $(1 med upright(e) V) \/ c^2$,
   quantity: "electron volt-kilogram relationship"
 )
-#let hartreeatomicMassUnitRelationship = (
+#let hartreeatomic-mass-unit-relationship = (
   val: 2.92126231797e-08,
   uncert: 9.1e-18,
   unit: " u",
   symbol: $(1 med E_upright(h)) \/ c^2$,
   quantity: "hartree-atomic mass unit relationship"
 )
-#let hartreeelectronVoltRelationship = (
+#let hartreeelectron-volt-relationship = (
   val: 27.211386245981,
   uncert: 3e-11,
   unit: "eV",
   symbol: $E_upright(h)$,
   quantity: "hartree-electron volt relationship"
 )
-#let hartreehertzRelationship = (
+#let hartreehertz-relationship = (
   val: 6579683920499900.0,
   uncert: 7200.0,
   unit: " Hz",
   symbol: $(1 med E_upright(h)) \/ h$,
   quantity: "hartree-hertz relationship"
 )
-#let hartreeinverseMeterRelationship = (
+#let hartreeinverse-meter-relationship = (
   val: 21947463.136314,
   uncert: 2.4e-05,
   unit: "m^-1",
   symbol: $(1 med E_upright(h)) \/ h c$,
   quantity: "hartree-inverse meter relationship"
 )
-#let hartreejouleRelationship = (
+#let hartreejoule-relationship = (
   val: 4.359744722206e-18,
   uncert: 4.8e-30,
   unit: "J",
   symbol: $1 med E_upright(h)$,
   quantity: "hartree-joule relationship"
 )
-#let hartreekelvinRelationship = (
+#let hartreekelvin-relationship = (
   val: 315775.02480398,
   uncert: 3.4e-07,
   unit: "K",
   symbol: $(1 med E_upright(h)) \/ k$,
   quantity: "hartree-kelvin relationship"
 )
-#let hartreekilogramRelationship = (
+#let hartreekilogram-relationship = (
   val: 4.8508702095419e-35,
   uncert: 5.3e-47,
   unit: "kg",
   symbol: $(1 med E_upright(h)) \/ c^2$,
   quantity: "hartree-kilogram relationship"
 )
-#let hertzatomicMassUnitRelationship = (
+#let hertzatomic-mass-unit-relationship = (
   val: 4.439821659e-24,
   uncert: 1.4e-33,
   unit: "u",
   symbol: $(1 med upright(H) z) h \/ c^2$,
   quantity: "hertz-atomic mass unit relationship"
 )
-#let hertzelectronVoltRelationship = (
+#let hertzelectron-volt-relationship = (
   val: 4.135667696e-15,
   uncert: none,
   unit: "eV",
   symbol: $(1 med upright(H) z) h$,
   quantity: "hertz-electron volt relationship"
 )
-#let hertzhartreeRelationship = (
+#let hertzhartree-relationship = (
   val: 1.5198298460574e-16,
   uncert: 1.7e-28,
   unit: "E_h",
   symbol: $(1 med upright(H) z) h$,
   quantity: "hertz-hartree relationship"
 )
-#let hertzinverseMeterRelationship = (
+#let hertzinverse-meter-relationship = (
   val: 3.335640951e-09,
   uncert: none,
   unit: "m^-1",
   symbol: $(1 med upright(H) z) \/ c$,
   quantity: "hertz-inverse meter relationship"
 )
-#let hertzjouleRelationship = (
+#let hertzjoule-relationship = (
   val: 6.62607015e-34,
   uncert: none,
   unit: "J",
   symbol: $(1 med upright(H) z) h$,
   quantity: "hertz-joule relationship"
 )
-#let hertzkelvinRelationship = (
+#let hertzkelvin-relationship = (
   val: 4.799243073e-11,
   uncert: none,
   unit: "K",
   symbol: $(1 med upright(H) z) h \/ k$,
   quantity: "hertz-kelvin relationship"
 )
-#let hertzkilogramRelationship = (
+#let hertzkilogram-relationship = (
   val: 7.372497323e-51,
   uncert: none,
   unit: "kg",
   symbol: $(1 med upright(H) z) h \/ c^2$,
   quantity: "hertz-kilogram relationship"
 )
-#let inverseFinestructureConstant = (
+#let inverse-finestructure-constant = (
   val: 137.035999177,
   uncert: 2.1e-08,
   unit: "none",
   symbol: $alpha^(-1)$,
   quantity: "inverse fine-structure constant"
 )
-#let inverseMeteratomicMassUnitRelationship = (
+#let inverse-meteratomic-mass-unit-relationship = (
   val: 1.33102504824e-15,
   uncert: 4.1e-25,
   unit: "u",
   symbol: $(1 med upright(m)^(-1)) h \/ c$,
   quantity: "inverse meter-atomic mass unit relationship"
 )
-#let inverseMeterelectronVoltRelationship = (
+#let inverse-meterelectron-volt-relationship = (
   val: 1.239841984e-06,
   uncert: none,
   unit: "eV",
   symbol: $(1 med upright(m)^(-1)) h c$,
   quantity: "inverse meter-electron volt relationship"
 )
-#let inverseMeterhartreeRelationship = (
+#let inverse-meterhartree-relationship = (
   val: 4.5563352529132e-08,
   uncert: 5e-20,
   unit: " E_h",
   symbol: $(1 med upright(m)^(-1)) h c$,
   quantity: "inverse meter-hartree relationship"
 )
-#let inverseMeterhertzRelationship = (
+#let inverse-meterhertz-relationship = (
   val: 299792458,
   uncert: none,
   unit: "Hz",
   symbol: $(1 med upright(m)^(-1)) c$,
   quantity: "inverse meter-hertz relationship"
 )
-#let inverseMeterjouleRelationship = (
+#let inverse-meterjoule-relationship = (
   val: 1.986445857e-25,
   uncert: none,
   unit: "J",
   symbol: $(1 med upright(m)^(-1)) h c$,
   quantity: "inverse meter-joule relationship"
 )
-#let inverseMeterkelvinRelationship = (
+#let inverse-meterkelvin-relationship = (
   val: 0.01438776877,
   uncert: none,
   unit: "K",
   symbol: $(1 med upright(m)^(-1)) h c \/ k$,
   quantity: "inverse meter-kelvin relationship"
 )
-#let inverseMeterkilogramRelationship = (
+#let inverse-meterkilogram-relationship = (
   val: 2.210219094e-42,
   uncert: none,
   unit: "kg",
   symbol: $(1 med upright(m)^(-1)) h \/ c$,
   quantity: "inverse meter-kilogram relationship"
 )
-#let jouleatomicMassUnitRelationship = (
+#let jouleatomic-mass-unit-relationship = (
   val: 6700535247.1,
   uncert: 2.1,
   unit: "u",
   symbol: $(1 upright(med) J) \/ c^2$,
   quantity: "joule-atomic mass unit relationship"
 )
-#let jouleelectronVoltRelationship = (
+#let jouleelectron-volt-relationship = (
   val: 6.241509074e+18,
   uncert: none,
   unit: "eV",
   symbol: $1 J$,
   quantity: "joule-electron volt relationship"
 )
-#let joulehartreeRelationship = (
+#let joulehartree-relationship = (
   val: 2.2937122783969e+17,
   uncert: 250000.0,
   unit: " E_h",
   symbol: $1 J$,
   quantity: "joule-hartree relationship"
 )
-#let joulehertzRelationship = (
+#let joulehertz-relationship = (
   val: 1.509190179e+33,
   uncert: none,
   unit: "Hz",
   symbol: $(1 upright(med) J) \/ h$,
   quantity: "joule-hertz relationship"
 )
-#let jouleinverseMeterRelationship = (
+#let jouleinverse-meter-relationship = (
   val: 5.034116567e+24,
   uncert: none,
   unit: "m^-1",
   symbol: $(1 upright(med) J) \/ h c$,
   quantity: "joule-inverse meter relationship"
 )
-#let joulekelvinRelationship = (
+#let joulekelvin-relationship = (
   val: 7.242970516e+22,
   uncert: none,
   unit: "K",
   symbol: $(1 upright(med) J) \/ k$,
   quantity: "joule-kelvin relationship"
 )
-#let joulekilogramRelationship = (
+#let joulekilogram-relationship = (
   val: 1.112650056e-17,
   uncert: none,
   unit: "kg",
   symbol: $(1 upright(med) J) \/ c^2$,
   quantity: "joule-kilogram relationship"
 )
-#let kelvinatomicMassUnitRelationship = (
+#let kelvinatomic-mass-unit-relationship = (
   val: 9.2510872884e-14,
   uncert: 2.9e-23,
   unit: "u",
   symbol: $(1 med upright(K)) k \/ c^2$,
   quantity: "kelvin-atomic mass unit relationship"
 )
-#let kelvinelectronVoltRelationship = (
+#let kelvinelectron-volt-relationship = (
   val: 8.617333262e-05,
   uncert: none,
   unit: "eV",
   symbol: $k$,
   quantity: "kelvin-electron volt relationship"
 )
-#let kelvinhartreeRelationship = (
+#let kelvinhartree-relationship = (
   val: 3.1668115634564e-06,
   uncert: 3.5e-18,
   unit: " E_h",
   symbol: $(1 med upright(K)) k$,
   quantity: "kelvin-hartree relationship"
 )
-#let kelvinhertzRelationship = (
+#let kelvinhertz-relationship = (
   val: 20836619120.0,
   uncert: none,
   unit: "Hz",
   symbol: $(1 med upright(K)) k \/ h$,
   quantity: "kelvin-hertz relationship"
 )
-#let kelvininverseMeterRelationship = (
+#let kelvininverse-meter-relationship = (
   val: 69.50348004,
   uncert: none,
   unit: "m^-1",
   symbol: $(1 med upright(K)) k \/ h c$,
   quantity: "kelvin-inverse meter relationship"
 )
-#let kelvinjouleRelationship = (
+#let kelvinjoule-relationship = (
   val: 1.380649e-23,
   uncert: none,
   unit: "J",
   symbol: $(1 med upright(K)) k$,
   quantity: "kelvin-joule relationship"
 )
-#let kelvinkilogramRelationship = (
+#let kelvinkilogram-relationship = (
   val: 1.536179187e-40,
   uncert: none,
   unit: "kg",
   symbol: $(1 med upright(K)) k \/ c^2$,
   quantity: "kelvin-kilogram relationship"
 )
-#let kilogramatomicMassUnitRelationship = (
+#let kilogramatomic-mass-unit-relationship = (
   val: 6.0221407537e+26,
   uncert: 1.9e+17,
   unit: " u",
   symbol: $1 med upright(k) g$,
   quantity: "kilogram-atomic mass unit relationship"
 )
-#let kilogramelectronVoltRelationship = (
+#let kilogramelectron-volt-relationship = (
   val: 5.609588603e+35,
   uncert: none,
   unit: "eV",
   symbol: $(1 med upright(k) g) c^2$,
   quantity: "kilogram-electron volt relationship"
 )
-#let kilogramhartreeRelationship = (
+#let kilogramhartree-relationship = (
   val: 2.0614857887415e+34,
   uncert: 2.2e+22,
   unit: " E_h",
   symbol: $(1 med upright(k) g) c^2$,
   quantity: "kilogram-hartree relationship"
 )
-#let kilogramhertzRelationship = (
+#let kilogramhertz-relationship = (
   val: 1.356392489e+50,
   uncert: none,
   unit: "Hz",
   symbol: $(1 med upright(k) g) c^2 \/ h$,
   quantity: "kilogram-hertz relationship"
 )
-#let kilograminverseMeterRelationship = (
+#let kilograminverse-meter-relationship = (
   val: 4.524438335e+41,
   uncert: none,
   unit: "m^-1",
   symbol: $(1 med upright(k) g) c \/ h$,
   quantity: "kilogram-inverse meter relationship"
 )
-#let kilogramjouleRelationship = (
+#let kilogramjoule-relationship = (
   val: 8.987551787e+16,
   uncert: none,
   unit: "J",
   symbol: $(1 med upright(k) g) c^2$,
   quantity: "kilogram-joule relationship"
 )
-#let kilogramkelvinRelationship = (
+#let kilogramkelvin-relationship = (
   val: 6.50965726e+39,
   uncert: none,
   unit: "K",

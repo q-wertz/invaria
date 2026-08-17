@@ -10,77 +10,77 @@
 
 #import "../common_packages.typ": *
 
-#let avogadroConstant = (
+#let avogadro-constant = (
   val: 6.02214076e+23,
   uncert: none,
   unit: "mol^-1",
   symbol: $N_upright(A)$,
   quantity: "Avogadro constant"
 )
-#let boltzmannConstant = (
+#let boltzmann-constant = (
   val: 1.380649e-23,
   uncert: none,
   unit: "J K^-1",
   symbol: $k$,
   quantity: "Boltzmann constant"
 )
-#let elementaryCharge = (
+#let elementary-charge = (
   val: 1.602176634e-19,
   uncert: none,
   unit: "C",
   symbol: $e$,
   quantity: "elementary charge"
 )
-#let hyperfineTransitionFrequencyOfCs133 = (
+#let hyperfine-transition-frequency-of-cs133 = (
   val: 9192631770,
   uncert: none,
   unit: "Hz",
   symbol: $Delta nu_(upright(C) s)$,
   quantity: "hyperfine transition frequency of Cs-133"
 )
-#let luminousEfficacy = (
+#let luminous-efficacy = (
   val: 683,
   uncert: none,
   unit: "lm W^-1",
   symbol: $K_(upright(c) d)$,
   quantity: "luminous efficacy"
 )
-#let planckConstant = (
+#let planck-constant = (
   val: 6.62607015e-34,
   uncert: none,
   unit: "J Hz^-1",
   symbol: $h$,
   quantity: "Planck constant"
 )
-#let reducedPlanckConstant = (
+#let reduced-planck-constant = (
   val: 1.054571817e-34,
   uncert: none,
   unit: "J s",
   symbol: $planck$,
   quantity: "reduced Planck constant"
 )
-#let speedOfLightInVacuum = (
+#let speed-of-light-in-vacuum = (
   val: 299792458,
   uncert: none,
   unit: "m s^-1",
   symbol: $c$,
   quantity: "speed of light in vacuum"
 )
-#let standardAccelerationOfGravity = (
+#let standard-acceleration-of-gravity = (
   val: 9.80665,
   uncert: none,
   unit: "m s^-2",
   symbol: $g_upright(n)$,
   quantity: "standard acceleration of gravity"
 )
-#let standardAtmosphere = (
+#let standard-atmosphere = (
   val: 101325,
   uncert: none,
   unit: "Pa",
   symbol: $a t m$,
   quantity: "standard atmosphere"
 )
-#let standardstatePressure = (
+#let standardstate-pressure = (
   val: 100000,
   uncert: none,
   unit: "Pa",

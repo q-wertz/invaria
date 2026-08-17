@@ -10,105 +10,105 @@
 
 #import "../common_packages.typ": *
 
-#let characteristicImpedanceOfVacuum = (
+#let characteristic-impedance-of-vacuum = (
   val: 376.730313412,
   uncert: 5.9e-08,
   unit: "ohm",
   symbol: $Z_0$,
   quantity: "characteristic impedance of vacuum"
 )
-#let newtonianConstantOfGravitation = (
+#let newtonian-constant-of-gravitation = (
   val: 6.6743e-11,
   uncert: 1.5e-15,
   unit: "m^3 kg^-1 s^-2",
   symbol: $G$,
   quantity: "Newtonian constant of gravitation"
 )
-#let newtonianConstantOfGravitationOverHbarC = (
+#let newtonian-constant-of-gravitation-over-hbar-c = (
   val: 6.70883e-39,
   uncert: 1.5e-43,
   unit: "(GeV/c^2)^-2",
   symbol: $G \/ planck c$,
   quantity: "Newtonian constant of gravitation over h-bar c"
 )
-#let planckConstant = (
+#let planck-constant = (
   val: 6.62607015e-34,
   uncert: none,
   unit: "J Hz^-1",
   symbol: $h$,
   quantity: "Planck constant"
 )
-#let planckConstantInEvPerHz = (
+#let planck-constant-in-ev-per-hz = (
   val: 4.135667696e-15,
   uncert: none,
   unit: "eV Hz^-1",
   symbol: $h$,
   quantity: "Planck constant in eV/Hz"
 )
-#let planckLength = (
+#let planck-length = (
   val: 1.616255e-35,
   uncert: 1.8e-40,
   unit: " m",
   symbol: $l_upright(P)$,
   quantity: "Planck length"
 )
-#let planckMass = (
+#let planck-mass = (
   val: 2.176434e-08,
   uncert: 2.4e-13,
   unit: "kg",
   symbol: $m_upright(P)$,
   quantity: "Planck mass"
 )
-#let planckMassEnergyEquivalentInGev = (
+#let planck-mass-energy-equivalent-in-gev = (
   val: 1.22089e+19,
   uncert: 140000000000000.0,
   unit: "GeV",
   symbol: $m_upright(P) c^2$,
   quantity: "Planck mass energy equivalent in GeV"
 )
-#let planckTemperature = (
+#let planck-temperature = (
   val: 1.416784e+32,
   uncert: 1.6e+27,
   unit: "K",
   symbol: $T_upright(P)$,
   quantity: "Planck temperature"
 )
-#let planckTime = (
+#let planck-time = (
   val: 5.391247e-44,
   uncert: 6e-49,
   unit: " s",
   symbol: $t_upright(P)$,
   quantity: "Planck time"
 )
-#let reducedPlanckConstant = (
+#let reduced-planck-constant = (
   val: 1.054571817e-34,
   uncert: none,
   unit: "J s",
   symbol: $planck$,
   quantity: "reduced Planck constant"
 )
-#let reducedPlanckConstantInEvS = (
+#let reduced-planck-constant-in-ev-s = (
   val: 6.582119569e-16,
   uncert: none,
   unit: "eV s",
   symbol: $planck$,
   quantity: "reduced Planck constant in eV s"
 )
-#let reducedPlanckConstantTimesCInMevFm = (
+#let reduced-planck-constant-times-c-in-mev-fm = (
   val: 197.3269804,
   uncert: none,
   unit: "MeV fm",
   symbol: $planck c$,
   quantity: "reduced Planck constant times c in MeV fm"
 )
-#let speedOfLightInVacuum = (
+#let speed-of-light-in-vacuum = (
   val: 299792458,
   uncert: none,
   unit: "m s^-1",
   symbol: $c$,
   quantity: "speed of light in vacuum"
 )
-#let vacuumElectricPermittivity = (
+#let vacuum-electric-permittivity = (
   val: 8.8541878188e-12,
   uncert: 1.4e-21,
   unit: "F m^-1",

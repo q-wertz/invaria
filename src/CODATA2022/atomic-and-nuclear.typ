@@ -10,826 +10,826 @@
 
 #import "../common_packages.typ": *
 
-#let alphaParticleelectronMassRatio = (
+#let alpha-particleelectron-mass-ratio = (
   val: 7294.29954171,
   uncert: 1.7e-07,
   unit: "none",
   symbol: $m_upright(alpha) \/ m_upright(e)$,
   quantity: "alpha particle-electron mass ratio"
 )
-#let alphaParticleMass = (
+#let alpha-particle-mass = (
   val: 6.644657345e-27,
   uncert: 2.1e-36,
   unit: "kg",
   symbol: $m_upright(alpha)$,
   quantity: "alpha particle mass"
 )
-#let alphaParticleMassEnergyEquivalent = (
+#let alpha-particle-mass-energy-equivalent = (
   val: 5.9719201997e-10,
   uncert: 1.9e-19,
   unit: "J",
   symbol: $m_upright(alpha) c^2$,
   quantity: "alpha particle mass energy equivalent"
 )
-#let alphaParticleMassEnergyEquivalentInMev = (
+#let alpha-particle-mass-energy-equivalent-in-mev = (
   val: 3727.3794118,
   uncert: 1.2e-06,
   unit: " MeV",
   symbol: $m_upright(alpha) c^2$,
   quantity: "alpha particle mass energy equivalent in MeV"
 )
-#let alphaParticleMassInU = (
+#let alpha-particle-mass-in-u = (
   val: 4.001506179129,
   uncert: 6.2e-11,
   unit: "u",
   symbol: $m_upright(alpha)$,
   quantity: "alpha particle mass in u"
 )
-#let alphaParticleMolarMass = (
+#let alpha-particle-molar-mass = (
   val: 0.0040015061833,
   uncert: 1.2e-12,
   unit: " kg mol^-1",
   symbol: $M(upright(alpha)), M_upright(alpha)$,
   quantity: "alpha particle molar mass"
 )
-#let alphaParticleprotonMassRatio = (
+#let alpha-particleproton-mass-ratio = (
   val: 3.972599690252,
   uncert: 7e-11,
   unit: "none",
   symbol: $m_upright(alpha) \/ m_upright(p)$,
   quantity: "alpha particle-proton mass ratio"
 )
-#let alphaParticleRmsChargeRadius = (
+#let alpha-particle-rms-charge-radius = (
   val: 1.6785e-15,
   uncert: 2.1e-18,
   unit: "m",
   symbol: $r_upright(alpha)$,
   quantity: "alpha particle rms charge radius"
 )
-#let bohrRadius = (
+#let bohr-radius = (
   val: 5.29177210544e-11,
   uncert: 8.2e-21,
   unit: "m",
   symbol: $a_0$,
   quantity: "Bohr radius"
 )
-#let classicalElectronRadius = (
+#let classical-electron-radius = (
   val: 2.8179403205e-15,
   uncert: 1.3e-24,
   unit: "m",
   symbol: $r_upright(e)$,
   quantity: "classical electron radius"
 )
-#let comptonWavelength = (
+#let compton-wavelength = (
   val: 2.42631023538e-12,
   uncert: 7.6e-22,
   unit: "m",
   symbol: $lambda_upright(C)$,
   quantity: "Compton wavelength"
 )
-#let deuteronelectronMassRatio = (
+#let deuteronelectron-mass-ratio = (
   val: 3670.482967655,
   uncert: 6.3e-08,
   unit: "none",
   symbol: $m_upright(d) \/ m_upright(e)$,
   quantity: "deuteron-electron mass ratio"
 )
-#let deuteronGFactor = (
+#let deuteron-g-factor = (
   val: 0.8574382335,
   uncert: 2.2e-09,
   unit: "none",
   symbol: $g_upright(d)$,
   quantity: "deuteron g factor"
 )
-#let deuteronMass = (
+#let deuteron-mass = (
   val: 3.3435837768e-27,
   uncert: 1e-36,
   unit: "kg",
   symbol: $m_upright(d)$,
   quantity: "deuteron mass"
 )
-#let deuteronMassEnergyEquivalent = (
+#let deuteron-mass-energy-equivalent = (
   val: 3.00506323491e-10,
   uncert: 9.4e-20,
   unit: "J",
   symbol: $m_upright(d) c^2$,
   quantity: "deuteron mass energy equivalent"
 )
-#let deuteronMassEnergyEquivalentInMev = (
+#let deuteron-mass-energy-equivalent-in-mev = (
   val: 1875.612945,
   uncert: 5.8e-07,
   unit: " MeV",
   symbol: $m_upright(d) c^2$,
   quantity: "deuteron mass energy equivalent in MeV"
 )
-#let deuteronMassInU = (
+#let deuteron-mass-in-u = (
   val: 2.013553212544,
   uncert: 1.5e-11,
   unit: "u",
   symbol: $m_upright(d)$,
   quantity: "deuteron mass in u"
 )
-#let deuteronMolarMass = (
+#let deuteron-molar-mass = (
   val: 0.00201355321466,
   uncert: 6.3e-13,
   unit: " kg mol^-1",
   symbol: $M(upright(d)), M_upright(d)$,
   quantity: "deuteron molar mass"
 )
-#let deuteronprotonMassRatio = (
+#let deuteronproton-mass-ratio = (
   val: 1.9990075012699,
   uncert: 8.4e-12,
   unit: "none",
   symbol: $m_upright(d) \/ m_upright(p)$,
   quantity: "deuteron-proton mass ratio"
 )
-#let deuteronRmsChargeRadius = (
+#let deuteron-rms-charge-radius = (
   val: 2.12778e-15,
   uncert: 2.7e-19,
   unit: "m",
   symbol: $r_upright(d)$,
   quantity: "deuteron rms charge radius"
 )
-#let electronChargeToMassQuotient = (
+#let electron-charge-to-mass-quotient = (
   val: -175882000838.0,
   uncert: 55.0,
   unit: " C kg^-1",
   symbol: $-e \/ m_upright(e)$,
   quantity: "electron charge to mass quotient"
 )
-#let electrondeuteronMassRatio = (
+#let electrondeuteron-mass-ratio = (
   val: 0.0002724437107629,
   uncert: 4.7e-15,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(d)$,
   quantity: "electron-deuteron mass ratio"
 )
-#let electronGFactor = (
+#let electron-g-factor = (
   val: -2.00231930436092,
   uncert: 3.6e-13,
   unit: "none",
   symbol: $g_(upright(e)^-)$,
   quantity: "electron g factor"
 )
-#let electronhelionMassRatio = (
+#let electronhelion-mass-ratio = (
   val: 0.0001819543074649,
   uncert: 5.3e-15,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(h)$,
   quantity: "electron-helion mass ratio"
 )
-#let electronMass = (
+#let electron-mass = (
   val: 9.1093837139e-31,
   uncert: 2.8e-40,
   unit: "kg",
   symbol: $m_upright(e)$,
   quantity: "electron mass"
 )
-#let electronMassEnergyEquivalent = (
+#let electron-mass-energy-equivalent = (
   val: 8.187105788e-14,
   uncert: 2.6e-23,
   unit: "J",
   symbol: $m_upright(e) c^2$,
   quantity: "electron mass energy equivalent"
 )
-#let electronMassEnergyEquivalentInMev = (
+#let electron-mass-energy-equivalent-in-mev = (
   val: 0.51099895069,
   uncert: 1.6e-10,
   unit: " MeV",
   symbol: $m_upright(e) c^2$,
   quantity: "electron mass energy equivalent in MeV"
 )
-#let electronMassInU = (
+#let electron-mass-in-u = (
   val: 0.0005485799090441,
   uncert: 9.7e-15,
   unit: "u",
   symbol: $m_upright(e)$,
   quantity: "electron mass in u"
 )
-#let electronMolarMass = (
+#let electron-molar-mass = (
   val: 5.4857990962e-07,
   uncert: 1.7e-16,
   unit: " kg mol^-1",
   symbol: $M(upright(e)), M_upright(e)$,
   quantity: "electron molar mass"
 )
-#let electronmuonMassRatio = (
+#let electronmuon-mass-ratio = (
   val: 0.0048363317,
   uncert: 1.1e-10,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(mu)$,
   quantity: "electron-muon mass ratio"
 )
-#let electronneutronMassRatio = (
+#let electronneutron-mass-ratio = (
   val: 0.00054386734416,
   uncert: 2.2e-13,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(n)$,
   quantity: "electron-neutron mass ratio"
 )
-#let electronprotonMassRatio = (
+#let electronproton-mass-ratio = (
   val: 0.0005446170214889,
   uncert: 9.4e-15,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(p)$,
   quantity: "electron-proton mass ratio"
 )
-#let electrontauMassRatio = (
+#let electrontau-mass-ratio = (
   val: 0.000287585,
   uncert: 1.9e-08,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(tau)$,
   quantity: "electron-tau mass ratio"
 )
-#let electronToAlphaParticleMassRatio = (
+#let electron-to-alpha-particle-mass-ratio = (
   val: 0.0001370933554733,
   uncert: 3.2e-15,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(alpha)$,
   quantity: "electron to alpha particle mass ratio"
 )
-#let electrontritonMassRatio = (
+#let electrontriton-mass-ratio = (
   val: 0.0001819200062327,
   uncert: 6.8e-15,
   unit: "none",
   symbol: $m_upright(e) \/ m_upright(t)$,
   quantity: "electron-triton mass ratio"
 )
-#let fermiCouplingConstant = (
+#let fermi-coupling-constant = (
   val: 1.1663787e-05,
   uncert: 6e-12,
   unit: " GeV^-2",
   symbol: $G_upright(F) \/ (planck c)^3$,
   quantity: "Fermi coupling constant"
 )
-#let finestructureConstant = (
+#let finestructure-constant = (
   val: 0.0072973525643,
   uncert: 1.1e-12,
   unit: "none",
   symbol: $alpha$,
   quantity: "fine-structure constant"
 )
-#let hartreeEnergy = (
+#let hartree-energy = (
   val: 4.359744722206e-18,
   uncert: 4.8e-30,
   unit: "J",
   symbol: $E_upright(h)$,
   quantity: "Hartree energy"
 )
-#let hartreeEnergyInEv = (
+#let hartree-energy-in-ev = (
   val: 27.211386245981,
   uncert: 3e-11,
   unit: "eV",
   symbol: $E_upright(h)$,
   quantity: "Hartree energy in eV"
 )
-#let helionelectronMassRatio = (
+#let helionelectron-mass-ratio = (
   val: 5495.88527984,
   uncert: 1.6e-07,
   unit: "none",
   symbol: $m_upright(h) \/ m_upright(e)$,
   quantity: "helion-electron mass ratio"
 )
-#let helionGFactor = (
+#let helion-g-factor = (
   val: -4.2552506995,
   uncert: 3.4e-09,
   unit: "none",
   symbol: $g_upright(h)$,
   quantity: "helion g factor"
 )
-#let helionMass = (
+#let helion-mass = (
   val: 5.0064127862e-27,
   uncert: 1.6e-36,
   unit: "kg",
   symbol: $m_upright(h)$,
   quantity: "helion mass"
 )
-#let helionMassEnergyEquivalent = (
+#let helion-mass-energy-equivalent = (
   val: 4.4995394185e-10,
   uncert: 1.4e-19,
   unit: "J",
   symbol: $m_upright(h) c^2$,
   quantity: "helion mass energy equivalent"
 )
-#let helionMassEnergyEquivalentInMev = (
+#let helion-mass-energy-equivalent-in-mev = (
   val: 2808.39161112,
   uncert: 8.8e-07,
   unit: " MeV",
   symbol: $m_upright(h) c^2$,
   quantity: "helion mass energy equivalent in MeV"
 )
-#let helionMassInU = (
+#let helion-mass-in-u = (
   val: 3.014932246932,
   uncert: 7.4e-11,
   unit: "u",
   symbol: $m_upright(h)$,
   quantity: "helion mass in u"
 )
-#let helionMolarMass = (
+#let helion-molar-mass = (
   val: 0.0030149322501,
   uncert: 9.4e-13,
   unit: " kg mol^-1",
   symbol: $M(upright(h)), M_upright(h)$,
   quantity: "helion molar mass"
 )
-#let helionprotonMassRatio = (
+#let helionproton-mass-ratio = (
   val: 2.993152671552,
   uncert: 7e-11,
   unit: "none",
   symbol: $m_upright(h) \/ m_upright(p)$,
   quantity: "helion-proton mass ratio"
 )
-#let inverseFinestructureConstant = (
+#let inverse-finestructure-constant = (
   val: 137.035999177,
   uncert: 2.1e-08,
   unit: "none",
   symbol: $alpha^(-1)$,
   quantity: "inverse fine-structure constant"
 )
-#let muonComptonWavelength = (
+#let muon-compton-wavelength = (
   val: 1.17344411e-14,
   uncert: 2.6e-22,
   unit: " m",
   symbol: $lambda_(upright(C) , upright(mu))$,
   quantity: "muon Compton wavelength"
 )
-#let muonelectronMassRatio = (
+#let muonelectron-mass-ratio = (
   val: 206.7682827,
   uncert: 4.6e-06,
   unit: "none",
   symbol: $m_upright(mu) \/ m_upright(e)$,
   quantity: "muon-electron mass ratio"
 )
-#let muonGFactor = (
+#let muon-g-factor = (
   val: -2.00233184123,
   uncert: 8.2e-10,
   unit: "none",
   symbol: $g_(upright(mu)^-)$,
   quantity: "muon g factor"
 )
-#let muonMass = (
+#let muon-mass = (
   val: 1.883531627e-28,
   uncert: 4.2e-36,
   unit: " kg",
   symbol: $m_upright(mu)$,
   quantity: "muon mass"
 )
-#let muonMassEnergyEquivalent = (
+#let muon-mass-energy-equivalent = (
   val: 1.692833804e-11,
   uncert: 3.8e-19,
   unit: " J",
   symbol: $m_upright(mu) c^2$,
   quantity: "muon mass energy equivalent"
 )
-#let muonMassEnergyEquivalentInMev = (
+#let muon-mass-energy-equivalent-in-mev = (
   val: 105.6583755,
   uncert: 2.3e-06,
   unit: " MeV",
   symbol: $m_upright(mu) c^2$,
   quantity: "muon mass energy equivalent in MeV"
 )
-#let muonMassInU = (
+#let muon-mass-in-u = (
   val: 0.1134289257,
   uncert: 2.5e-09,
   unit: " u",
   symbol: $m_upright(mu)$,
   quantity: "muon mass in u"
 )
-#let muonMolarMass = (
+#let muon-molar-mass = (
   val: 0.0001134289258,
   uncert: 2.5e-12,
   unit: "kg mol^-1",
   symbol: $M(upright(mu)), M_upright(mu)$,
   quantity: "muon molar mass"
 )
-#let muonneutronMassRatio = (
+#let muonneutron-mass-ratio = (
   val: 0.1124545168,
   uncert: 2.5e-09,
   unit: "none",
   symbol: $m_upright(mu) \/ m_upright(n)$,
   quantity: "muon-neutron mass ratio"
 )
-#let muonprotonMassRatio = (
+#let muonproton-mass-ratio = (
   val: 0.1126095262,
   uncert: 2.5e-09,
   unit: "none",
   symbol: $m_upright(mu) \/ m_upright(p)$,
   quantity: "muon-proton mass ratio"
 )
-#let muontauMassRatio = (
+#let muontau-mass-ratio = (
   val: 0.0594635,
   uncert: 4e-06,
   unit: "none",
   symbol: $m_upright(mu) \/ m_upright(tau)$,
   quantity: "muon-tau mass ratio"
 )
-#let neutronComptonWavelength = (
+#let neutron-compton-wavelength = (
   val: 1.31959090382e-15,
   uncert: 6.7e-25,
   unit: "m",
   symbol: $lambda_(upright(C) , n)$,
   quantity: "neutron Compton wavelength"
 )
-#let neutronelectronMassRatio = (
+#let neutronelectron-mass-ratio = (
   val: 1838.683662,
   uncert: 7.4e-07,
   unit: "none",
   symbol: $m_upright(n) \/ m_upright(e)$,
   quantity: "neutron-electron mass ratio"
 )
-#let neutronGFactor = (
+#let neutron-g-factor = (
   val: -3.82608552,
   uncert: 9e-07,
   unit: "none",
   symbol: $g_upright(n)$,
   quantity: "neutron g factor"
 )
-#let neutronMass = (
+#let neutron-mass = (
   val: 1.67492750056e-27,
   uncert: 8.5e-37,
   unit: "kg",
   symbol: $m_upright(n)$,
   quantity: "neutron mass"
 )
-#let neutronMassEnergyEquivalent = (
+#let neutron-mass-energy-equivalent = (
   val: 1.50534976514e-10,
   uncert: 7.6e-20,
   unit: "J",
   symbol: $m_upright(n) c^2$,
   quantity: "neutron mass energy equivalent"
 )
-#let neutronMassEnergyEquivalentInMev = (
+#let neutron-mass-energy-equivalent-in-mev = (
   val: 939.56542194,
   uncert: 4.8e-07,
   unit: " MeV",
   symbol: $m_upright(n) c^2$,
   quantity: "neutron mass energy equivalent in MeV"
 )
-#let neutronMassInU = (
+#let neutron-mass-in-u = (
   val: 1.00866491606,
   uncert: 4e-10,
   unit: " u",
   symbol: $m_upright(n)$,
   quantity: "neutron mass in u"
 )
-#let neutronMolarMass = (
+#let neutron-molar-mass = (
   val: 0.00100866491712,
   uncert: 5.1e-13,
   unit: " kg mol^-1",
   symbol: $M(upright(n)), M_upright(n)$,
   quantity: "neutron molar mass"
 )
-#let neutronmuonMassRatio = (
+#let neutronmuon-mass-ratio = (
   val: 8.89248408,
   uncert: 2e-07,
   unit: "none",
   symbol: $m_upright(n) \/ m_upright(mu)$,
   quantity: "neutron-muon mass ratio"
 )
-#let neutronprotonMassDifference = (
+#let neutronproton-mass-difference = (
   val: 2.30557461e-30,
   uncert: 6.7e-37,
   unit: "kg",
   symbol: $m_upright(n) - m_upright(p)$,
   quantity: "neutron-proton mass difference"
 )
-#let neutronprotonMassDifferenceEnergyEquivalent = (
+#let neutronproton-mass-difference-energy-equivalent = (
   val: 2.07214712e-13,
   uncert: 6e-20,
   unit: "J",
   symbol: $(m_upright(n) - m_upright(p)) c^2$,
   quantity: "neutron-proton mass difference energy equivalent"
 )
-#let neutronprotonMassDifferenceEnergyEquivalentInMev = (
+#let neutronproton-mass-difference-energy-equivalent-in-mev = (
   val: 1.29333251,
   uncert: 3.8e-07,
   unit: " MeV",
   symbol: $(m_upright(n) - m_upright(p)) c^2$,
   quantity: "neutron-proton mass difference energy equivalent in MeV"
 )
-#let neutronprotonMassDifferenceInU = (
+#let neutronproton-mass-difference-in-u = (
   val: 0.00138844948,
   uncert: 4e-10,
   unit: " u",
   symbol: $m_upright(n) - m_upright(p)$,
   quantity: "neutron-proton mass difference in u"
 )
-#let neutronprotonMassRatio = (
+#let neutronproton-mass-ratio = (
   val: 1.00137841946,
   uncert: 4e-10,
   unit: "none",
   symbol: $m_upright(n) \/ m_upright(p)$,
   quantity: "neutron-proton mass ratio"
 )
-#let neutrontauMassRatio = (
+#let neutrontau-mass-ratio = (
   val: 0.528779,
   uncert: 3.6e-05,
   unit: "none",
   symbol: $m_upright(n) \/ m_upright(tau)$,
   quantity: "neutron-tau mass ratio"
 )
-#let protonChargeToMassQuotient = (
+#let proton-charge-to-mass-quotient = (
   val: 95788331.43,
   uncert: 0.03,
   unit: "C kg^-1",
   symbol: $e \/ m_upright(p)$,
   quantity: "proton charge to mass quotient"
 )
-#let protonComptonWavelength = (
+#let proton-compton-wavelength = (
   val: 1.3214098536e-15,
   uncert: 4.1e-25,
   unit: "m",
   symbol: $lambda_(upright(C) , p)$,
   quantity: "proton Compton wavelength"
 )
-#let protonelectronMassRatio = (
+#let protonelectron-mass-ratio = (
   val: 1836.152673426,
   uncert: 3.2e-08,
   unit: "none",
   symbol: $m_upright(p) \/ m_upright(e)$,
   quantity: "proton-electron mass ratio"
 )
-#let protonGFactor = (
+#let proton-g-factor = (
   val: 5.5856946893,
   uncert: 1.6e-09,
   unit: "none",
   symbol: $g_upright(p)$,
   quantity: "proton g factor"
 )
-#let protonMass = (
+#let proton-mass = (
   val: 1.67262192595e-27,
   uncert: 5.2e-37,
   unit: "kg",
   symbol: $m_upright(p)$,
   quantity: "proton mass"
 )
-#let protonMassEnergyEquivalent = (
+#let proton-mass-energy-equivalent = (
   val: 1.50327761802e-10,
   uncert: 4.7e-20,
   unit: "J",
   symbol: $m_upright(p) c^2$,
   quantity: "proton mass energy equivalent"
 )
-#let protonMassEnergyEquivalentInMev = (
+#let proton-mass-energy-equivalent-in-mev = (
   val: 938.27208943,
   uncert: 2.9e-07,
   unit: " MeV",
   symbol: $m_upright(p) c^2$,
   quantity: "proton mass energy equivalent in MeV"
 )
-#let protonMassInU = (
+#let proton-mass-in-u = (
   val: 1.0072764665789,
   uncert: 8.3e-12,
   unit: " u",
   symbol: $m_upright(p)$,
   quantity: "proton mass in u"
 )
-#let protonMolarMass = (
+#let proton-molar-mass = (
   val: 0.00100727646764,
   uncert: 3.1e-13,
   unit: " kg mol^-1",
   symbol: $M(upright(p)), M_upright(p)$,
   quantity: "proton molar mass"
 )
-#let protonmuonMassRatio = (
+#let protonmuon-mass-ratio = (
   val: 8.88024338,
   uncert: 2e-07,
   unit: "none",
   symbol: $m_upright(p) \/ m_upright(mu)$,
   quantity: "proton-muon mass ratio"
 )
-#let protonneutronMassRatio = (
+#let protonneutron-mass-ratio = (
   val: 0.99862347797,
   uncert: 4e-10,
   unit: "none",
   symbol: $m_upright(p) \/ m_upright(n)$,
   quantity: "proton-neutron mass ratio"
 )
-#let protonRmsChargeRadius = (
+#let proton-rms-charge-radius = (
   val: 8.4075e-16,
   uncert: 6.4e-19,
   unit: "m",
   symbol: $r_upright(p)$,
   quantity: "proton rms charge radius"
 )
-#let protontauMassRatio = (
+#let protontau-mass-ratio = (
   val: 0.528051,
   uncert: 3.6e-05,
   unit: "none",
   symbol: $m_upright(p) \/ m_upright(tau)$,
   quantity: "proton-tau mass ratio"
 )
-#let quantumOfCirculation = (
+#let quantum-of-circulation = (
   val: 0.00036369475467,
   uncert: 1.1e-13,
   unit: " m^2 s^-1",
   symbol: $upright(pi) planck \/ m_upright(e)$,
   quantity: "quantum of circulation"
 )
-#let quantumOfCirculationTimes2 = (
+#let quantum-of-circulation-times-2 = (
   val: 0.00072738950934,
   uncert: 2.3e-13,
   unit: " m^2 s^-1",
   symbol: $2 upright(pi) planck \/ m_upright(e)$,
   quantity: "quantum of circulation times 2"
 )
-#let reducedComptonWavelength = (
+#let reduced-compton-wavelength = (
   val: 3.8615926744e-13,
   uncert: 1.2e-22,
   unit: "m",
   symbol: $ƛ_upright(C)$,
   quantity: "reduced Compton wavelength"
 )
-#let reducedMuonComptonWavelength = (
+#let reduced-muon-compton-wavelength = (
   val: 1.867594306e-15,
   uncert: 4.2e-23,
   unit: " m",
   symbol: $ƛ_(upright(C) , upright(mu))$,
   quantity: "reduced muon Compton wavelength"
 )
-#let reducedNeutronComptonWavelength = (
+#let reduced-neutron-compton-wavelength = (
   val: 2.100194152e-16,
   uncert: 1.1e-25,
   unit: "m",
   symbol: $ƛ_(upright(C) , n)$,
   quantity: "reduced neutron Compton wavelength"
 )
-#let reducedProtonComptonWavelength = (
+#let reduced-proton-compton-wavelength = (
   val: 2.10308910051e-16,
   uncert: 6.6e-26,
   unit: "m",
   symbol: $ƛ_(upright(C) , p)$,
   quantity: "reduced proton Compton wavelength"
 )
-#let reducedTauComptonWavelength = (
+#let reduced-tau-compton-wavelength = (
   val: 1.110538e-16,
   uncert: 7.5e-21,
   unit: " m",
   symbol: $ƛ_(upright(C) , upright(tau))$,
   quantity: "reduced tau Compton wavelength"
 )
-#let rydbergConstant = (
+#let rydberg-constant = (
   val: 10973731.568157,
   uncert: 1.2e-05,
   unit: "m^-1",
   symbol: $R_infinity$,
   quantity: "Rydberg constant"
 )
-#let rydbergConstantTimesCInHz = (
+#let rydberg-constant-times-c-in-hz = (
   val: 3289841960250000.0,
   uncert: 3600.0,
   unit: " Hz",
   symbol: $R_infinity c$,
   quantity: "Rydberg constant times c in Hz"
 )
-#let rydbergConstantTimesHcInEv = (
+#let rydberg-constant-times-hc-in-ev = (
   val: 13.60569312299,
   uncert: 1.5e-11,
   unit: "eV",
   symbol: $h c thin R_infinity$,
   quantity: "Rydberg constant times hc in eV"
 )
-#let rydbergConstantTimesHcInJ = (
+#let rydberg-constant-times-hc-in-j = (
   val: 2.179872361103e-18,
   uncert: 2.4e-30,
   unit: "J",
   symbol: $h c thin R_infinity$,
   quantity: "Rydberg constant times hc in J"
 )
-#let tauComptonWavelength = (
+#let tau-compton-wavelength = (
   val: 6.97771e-16,
   uncert: 4.7e-20,
   unit: "m",
   symbol: $lambda_(upright(C) , upright(tau))$,
   quantity: "tau Compton wavelength"
 )
-#let tauelectronMassRatio = (
+#let tauelectron-mass-ratio = (
   val: 3477.23,
   uncert: 0.23,
   unit: "none",
   symbol: $m_upright(tau) \/ m_upright(e)$,
   quantity: "tau-electron mass ratio"
 )
-#let tauEnergyEquivalent = (
+#let tau-energy-equivalent = (
   val: 1776.86,
   uncert: 0.12,
   unit: " MeV",
   symbol: $m_upright(tau) c^2$,
   quantity: "tau energy equivalent"
 )
-#let tauMass = (
+#let tau-mass = (
   val: 3.16754e-27,
   uncert: 2.1e-31,
   unit: "kg",
   symbol: $m_upright(tau)$,
   quantity: "tau mass"
 )
-#let tauMassEnergyEquivalent = (
+#let tau-mass-energy-equivalent = (
   val: 2.84684e-10,
   uncert: 1.9e-14,
   unit: "J",
   symbol: $m_upright(tau) c^2$,
   quantity: "tau mass energy equivalent"
 )
-#let tauMassInU = (
+#let tau-mass-in-u = (
   val: 1.90754,
   uncert: 0.00013,
   unit: " u",
   symbol: $m_upright(tau)$,
   quantity: "tau mass in u"
 )
-#let tauMolarMass = (
+#let tau-molar-mass = (
   val: 0.00190754,
   uncert: 1.3e-07,
   unit: " kg mol^-1",
   symbol: $M(upright(tau)), M_upright(tau)$,
   quantity: "tau molar mass"
 )
-#let taumuonMassRatio = (
+#let taumuon-mass-ratio = (
   val: 16.817,
   uncert: 0.0011,
   unit: "none",
   symbol: $m_upright(tau) \/ m_upright(mu)$,
   quantity: "tau-muon mass ratio"
 )
-#let tauneutronMassRatio = (
+#let tauneutron-mass-ratio = (
   val: 1.89115,
   uncert: 0.00013,
   unit: "none",
   symbol: $m_upright(tau) \/ m_upright(n)$,
   quantity: "tau-neutron mass ratio"
 )
-#let tauprotonMassRatio = (
+#let tauproton-mass-ratio = (
   val: 1.89376,
   uncert: 0.00013,
   unit: "none",
   symbol: $m_upright(tau) \/ m_upright(p)$,
   quantity: "tau-proton mass ratio"
 )
-#let thomsonCrossSection = (
+#let thomson-cross-section = (
   val: 6.6524587051e-29,
   uncert: 6.2e-38,
   unit: "m^2",
   symbol: $sigma_upright(e)$,
   quantity: "Thomson cross section"
 )
-#let tritonelectronMassRatio = (
+#let tritonelectron-mass-ratio = (
   val: 5496.92153551,
   uncert: 2.1e-07,
   unit: "none",
   symbol: $m_upright(t) \/ m_upright(e)$,
   quantity: "triton-electron mass ratio"
 )
-#let tritonGFactor = (
+#let triton-g-factor = (
   val: 5.95792493,
   uncert: 1.2e-08,
   unit: "none",
   symbol: $g_upright(t)$,
   quantity: "triton g factor"
 )
-#let tritonMass = (
+#let triton-mass = (
   val: 5.0073567512e-27,
   uncert: 1.6e-36,
   unit: "kg",
   symbol: $m_upright(t)$,
   quantity: "triton mass"
 )
-#let tritonMassEnergyEquivalent = (
+#let triton-mass-energy-equivalent = (
   val: 4.5003878119e-10,
   uncert: 1.4e-19,
   unit: "J",
   symbol: $m_upright(t) c^2$,
   quantity: "triton mass energy equivalent"
 )
-#let tritonMassEnergyEquivalentInMev = (
+#let triton-mass-energy-equivalent-in-mev = (
   val: 2808.92113668,
   uncert: 8.8e-07,
   unit: " MeV",
   symbol: $m_upright(t) c^2$,
   quantity: "triton mass energy equivalent in MeV"
 )
-#let tritonMassInU = (
+#let triton-mass-in-u = (
   val: 3.01550071597,
   uncert: 1e-10,
   unit: " u",
   symbol: $m_upright(t)$,
   quantity: "triton mass in u"
 )
-#let tritonMolarMass = (
+#let triton-molar-mass = (
   val: 0.00301550071913,
   uncert: 9.4e-13,
   unit: " kg mol^-1",
   symbol: $M(upright(t)), M_upright(t)$,
   quantity: "triton molar mass"
 )
-#let tritonprotonMassRatio = (
+#let tritonproton-mass-ratio = (
   val: 2.99371703403,
   uncert: 1e-10,
   unit: "none",
   symbol: $m_upright(t) \/ m_upright(p)$,
   quantity: "triton-proton mass ratio"
 )
-#let weakMixingAngle = (
+#let weak-mixing-angle = (
   val: 0.22305,
   uncert: 0.00023,
   unit: "none",
