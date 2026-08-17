@@ -7,7 +7,6 @@
 # by J. Baker, M. Douma, and S. Kotochigova. Available at https://physics.nist.gov/constants,
 # National Institute of Standards and Technology, Gaithersburg, MD 20899.
 
-
 - quantity: alpha particle-electron mass ratio
   symbol: ' $m_{\rm \alpha}/m_{\rm e}$ '
   value: 7294.29954171
@@ -2046,8 +2045,8 @@
   uncertainty: null
   unit: J Hz^-1
   categories:
-  - Defined constants
   - Universal
+  - Defined constants
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?h
 - quantity: Planck constant in eV/Hz
   symbol: ' $ h $ '
@@ -2303,8 +2302,8 @@
   uncertainty: null
   unit: J s
   categories:
-  - Defined constants
   - Universal
+  - Defined constants
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbar
 - quantity: reduced Planck constant in eV s
   symbol: ' $\hbar$ '
@@ -2320,8 +2319,8 @@
   uncertainty: null
   unit: MeV fm
   categories:
-  - Non-SI units
   - Universal
+  - Non-SI units
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?hbcmevf
 - quantity: reduced proton Compton wavelength
   symbol: ' $\lbar_{\rm C,p}$ '
@@ -2499,8 +2498,8 @@
   uncertainty: null
   unit: m s^-1
   categories:
-  - Defined constants
   - Universal
+  - Defined constants
   codata_url: https://physics.nist.gov/cgi-bin/cuu/Value?c
 - quantity: standard acceleration of gravity
   symbol: ' $g_{\rm n}$ '
