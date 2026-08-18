@@ -24,16 +24,16 @@ Each constant is a [Typst dictionary](https://typst.app/docs/reference/foundatio
 
 Currently, the following information is included:
 
-| Key      | Description | Additional information |
-|----------|-------------|------------------------|
-| `val`    | The constant value |  |
-| `uncert` | The constants uncertainty<br>(in the unit of the value) | `none` if exact |
-| `unit`   | The unit of the constant |  |
-| `symbol` | The symbol as the constant is usually written |  |
+| Key        | Description | Additional information |
+|------------|-------------|------------------------|
 | `quantity` | The name of the constant |  |
+| `val`      | The constant value |  |
+| `uncert`   | The constants uncertainty<br>(in the unit of the value) | `none` if exact |
+| `unit`     | The unit of the constant |  |
+| `symbol`   | The symbol as the constant is usually written |  |
 
 **Sidenote:**\
-There is also a `.yaml` file containing all the constants.
+There is also a `.yaml` file containing all the constants. Feel free to use it however you like.
 
 ### Importing Constants
 
@@ -142,7 +142,7 @@ Output:\
 
 ## Development
 
-The idea of this library is to use a python script to extracts the information from various data sources, combine it, structure it and output the Typst files.
+The idea of this library is to use a python script to extract the information from various data sources, combine it, structure it and output the Typst files.
 
 The tool uses the [NIST allascii table](https://physics.nist.gov/cuu/Constants/Table/allascii.txt) as basis and enriches it with information scraped from the [NIST CODATA website](https://physics.nist.gov/cuu/Constants/index.html).
 In theory the website contains all the information. But the original goal was, to read the information from the text and PDF files.
