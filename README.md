@@ -28,8 +28,8 @@ Currently, the following information is included:
 |----------|-------------|------------------------|
 | `val`    | The constant value |  |
 | `uncert` | The constants uncertainty<br>(in the unit of the value) | `none` if exact |
-| `unit`   | The unit of the constant | See [issue #3](https://github.com/q-wertz/invaria/issues/3) |
-| `symbol` | The symbol as the constant is usually written | Currently LaTeX code, see [issue #10](https://github.com/q-wertz/invaria/issues/10) |
+| `unit`   | The unit of the constant |  |
+| `symbol` | The symbol as the constant is usually written |  |
 | `quantity` | The name of the constant |  |
 
 **Sidenote:**\
