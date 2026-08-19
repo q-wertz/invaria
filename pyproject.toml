@@ -1,0 +1,14 @@
+[project]
+name = "invaria"
+version = "0.1.0"
+description = "Package for typst containing physical constants. Python code is to extract the constant information from various sources."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "numpy>=2.3.4",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+    "setuptools>=80.9.0",
+    "tqdm>=4.70.0",
+]

@@ -1,0 +1,33 @@
+{
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [
+        100
+    ],
+    // cSpell
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.language": "en",
+    "cSpell.words": [
+        "Invaria",
+        "typst"
+    ],
+    // AutoDocstring extension
+    "autoDocstring.docstringFormat": "numpy-notypes",
+    "autoDocstring.includeExtendedSummary": false,
+    // Better Todo Tree extension
+    "better-todo-tree.general.statusBar": "top three",
+    "better-todo-tree.tree.scanMode": "workspace only",
+    // ---------------------------------------------------------------------------------------------
+    // Python
+    // ---------------------------------------------------------------------------------------------
+    // General python settings
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    // https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff
+    "ruff.organizeImports": true,
+}
